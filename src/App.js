@@ -1,4 +1,5 @@
 import React from "react";
+<<<<<<< Updated upstream
 // import { Routes,Route, Link } from "react-router-dom";
 // import Home from "./components/Home"
 // import About from "./components/About"
@@ -40,6 +41,17 @@ function App() {
 
     </div>
   )
+=======
+import Footer from "./components/Footer"
+import './App.css';
+
+function App() {
+    return (
+        <div className="App">
+            <Footer />
+        </div>
+    );
+>>>>>>> Stashed changes
 }
 
-export default App
+export default App;
