@@ -39,11 +39,9 @@ const Footer = () => {
                 <h4>Get updates</h4>
                 <div className="subscribe">
                     <input type="email" placeholder="Enter your email:" />
-<<<<<<< Updated upstream
-                    <button><span role="img" aria-label="thumbs up">👍</span></button>
-=======
+
                     <button><span role="img" aria-label="thumbs up">Ok!</span></button>
->>>>>>> Stashed changes
+
                 </div>
             </div>
         </footer>
