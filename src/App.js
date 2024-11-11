@@ -20,7 +20,6 @@ function App() {
             <li> <Link to="/contact">Contact</Link></li>
             <li> <Link to="/blog">Blog</Link></li>
             <li> <Link to="/layout">Layout</Link></li>
-          
         </ul>
       </nav>
       <Routes>
