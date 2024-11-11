@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import React from "react";
 <<<<<<< Updated upstream
 // import { Routes,Route, Link } from "react-router-dom";
@@ -10,10 +11,17 @@ import React from "react";
 import './App.css'
 import Footer from "./components/Footer"
 
-function App() {
+=======
+import React from 'react'
+import {Routes,Route} from "react-router-dom";
+import Blog from"./Components/Blog"
+import './App.css'
+>>>>>>> Stashed changes
+function App() 
 
   return (
     <div className="App">
+<<<<<<< Updated upstream
       {/* <h1> Welcome Coders</h1>
       <nav>
         <ul className="ul">
@@ -39,6 +47,12 @@ function App() {
      */}
       <Footer />
 
+=======
+  <Blog/>
+    <Routes>
+      <Route path="Blog" element={<Blog/>}/>
+    </Routes>
+>>>>>>> Stashed changes
     </div>
   )
 =======
@@ -53,5 +67,8 @@ function App() {
     );
 >>>>>>> Stashed changes
 }
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 export default App;
