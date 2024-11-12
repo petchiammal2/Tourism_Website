@@ -13,6 +13,7 @@ import Footer from "./components/Footer"
 function App() {
   return (
     <div className="App">
+
   
       <Routes>
         <Route path="/" element={<Home />} />
@@ -29,3 +30,4 @@ function App() {
 }
 
 export default App;
+ 
