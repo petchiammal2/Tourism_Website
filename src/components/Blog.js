@@ -12,7 +12,7 @@ const Blog = () => {
       title: "Exploring the Wonders of Southeast Asia",
       date: "November 5, 2024",
       excerpt: "Discover the rich culture, breathtaking landscapes, and vibrant cities of Southeast Asia in our latest travel guide.",
-      image: "southeast_asia.jpg", // Replace with your actual image path
+      image: "southeast_asia.jpg",
       link: "/blog/southeast-asia",
     },
     {
@@ -20,7 +20,7 @@ const Blog = () => {
       title: "The Ultimate Travel Checklist",
       date: "October 22, 2024",
       excerpt: "Everything you need to pack, prepare, and remember before setting off on your next adventure.",
-      image: "travel_checklist.jpg", // Replace with your actual image path
+      image: "travel_checklist.jpg", 
       link: "/blog/travel-checklist",
     },
     {
@@ -28,18 +28,13 @@ const Blog = () => {
       title: "Top Travel Apps to Use in 2024",
       date: "October 10, 2024",
       excerpt: "From maps to language tools, discover the top travel apps that will make your journey easier.",
-      image: "travel_apps.jpg", // Replace with your actual image path
+      image: "travel_apps.jpg", 
       link: "/blog/travel-apps-2024",
     },
   ];
 
-function Blog() {
   return (
-<>
-<h1>This page for blog</h1>
-</>
-  )
-}
+
     <div className="blog">
       <h1>Tourism Blog</h1>
       <p>Get the latest travel tips, guides, and destination inspiration.</p>
@@ -55,7 +50,7 @@ function Blog() {
         ))}
       </div>
     </div>
-
+  )
 };
 
 export default Blog;
