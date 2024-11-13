@@ -1,0 +1,80 @@
+HomeSection1.css
+
+
+.home-section {
+  border-color: #01070e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px;
+  background-color: #c7bebb;
+  text-align: center;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: row-reverse; /* Swaps the position of text and image container */
+  max-width: 1200px;
+  align-items: center;
+}
+
+.home-image-outer-container {
+  display: flex;
+  gap: 20px;
+  width: 50%; /* Set image container width to 50% */
+}
+
+.home-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.home-text {
+  max-width: 500px;
+  margin-right: 40px; /* Moves text to the left */
+  width: 50%; /* Set text container width to 50% */
+}
+
+.home-text h1 {
+  font-size: 2rem;
+  margin-block-end: 10px;
+}
+
+.home-text p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.home-text button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #9a9ea3;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.home-text button:hover {
+  background-color: #b0c1d6;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .home-content {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .home-text {
+      margin-right: 0;
+      margin-top: 20px;
+  }
+
+  .home-image-outer-container,
+  .home-text {
+      width: 100%; /* Set full width for small screens */
+  }
+}
