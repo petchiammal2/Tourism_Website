@@ -1,5 +1,3 @@
-HomeSection1.js
-
 
 import React from 'react';
 import './HomeSection1.css';
