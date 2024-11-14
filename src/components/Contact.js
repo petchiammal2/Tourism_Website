@@ -1,15 +1,22 @@
+import React, { useState } from 'react';
+import './Contact.css';
 
 const Contact = () => {
-    return (
-      <>
-      <h1>This page for Contact</h1>
-      </>
-    )
+  const [formData, setFormData] = useState({
+    name: '',
+    mobile: '',
+    persons: '',
+    checkIn: '',
+    checkOut: '',
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
   };
-<<<<<<< Updated upstream
-  
-  export default Contact;
-=======
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -102,4 +109,3 @@ const Contact = () => {
 };
 
 export default Contact;
->>>>>>> Stashed changes
