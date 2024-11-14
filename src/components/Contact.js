@@ -23,8 +23,7 @@ const Contact = () => {
     console.log('Form submitted:', formData);
     // Add form submission logic here
   };
-
-
+  
   return (
     <div className="container">
       {/* Left Side - Description and Contact Details */}
