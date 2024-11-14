@@ -1,4 +1,5 @@
 // src/Components/Destinations.js
+import React from 'react';
 import './Destination.css';
 
 const destinations = [
