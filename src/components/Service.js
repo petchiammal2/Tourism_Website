@@ -4,6 +4,7 @@ import './Service.css';
 import tour from './Assets/tour.png';
 import hotel from './Assets/hotel.png';
 import transport from './Assets/transport.png';
+import StayPackage from './components/StayPackage';
 
 const services = [
   {
@@ -46,6 +47,7 @@ const Service = () => {
           </Link>
         ))}
       </div>
+      <StayPackage />
     </div>
   );
 };

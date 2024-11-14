@@ -9,7 +9,7 @@ import Gallery from "./components/Gallery";
 import './App.css';
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import StayPackage from './components/StayPackage';
+
 
 function App() {
   return (
@@ -24,7 +24,7 @@ function App() {
         <Route path="gallery" element={<Gallery />} />
       </Routes>
       <Footer />
-      <StayPackage />
+    
     </div>
   );
 }
