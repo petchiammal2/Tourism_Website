@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import React from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import Home from "./components/Home"
@@ -9,10 +10,16 @@ import Gallery from "./components/Gallery"
 import './App.css'
 import Footer from "./components/Footer"
 import Header from "./components/Header";
+=======
+import React from 'react';
+// import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import StayPackage from './components/StayPackage';
+>>>>>>> Stashed changes
 
 
 function App() {
   return (
+<<<<<<< Updated upstream
     <div className="App">
 
   <Header/>
@@ -26,6 +33,10 @@ function App() {
       </Routes>
       <Footer />
     </div>
+=======
+    <StayPackage/>
+
+>>>>>>> Stashed changes
   );
 
 }
