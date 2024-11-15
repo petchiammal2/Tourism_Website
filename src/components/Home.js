@@ -1,7 +1,12 @@
-
+import HeroSection from "./HeroSection";
+import HomeSection1 from "./HomeSection1";
 const Home = () => {
     return (
-        <h1>This page for Home</h1>
+   <>
+      <HeroSection/>
+      <HomeSection1/>
+   </>
+     
     )
   };
   
