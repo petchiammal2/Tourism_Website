@@ -1,3 +1,7 @@
+
+import './App.css'
+import HeroSection from "./Components/Herosection";
+import Destinations from "./Components/Destinations"
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
@@ -11,9 +15,13 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 
 
+
 function App() {
   return (
     <div className="App">
+      <HeroSection/>
+      <Destinations/>
+
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
