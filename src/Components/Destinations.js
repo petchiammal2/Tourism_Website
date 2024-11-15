@@ -1,6 +1,6 @@
 // src/Components/Destinations.js
 import React from 'react';
-import './Destination.css';
+import './CSS/Destination.css';
 
 const destinations = [
     { name: "Thailand", img: "path/to/thailand.jpg" },

@@ -1,22 +1,16 @@
-
+// src/Components/HeroSection.js
 import React from 'react';
-import './HeroSection.css';
+import './CSS/HeroSection.css';
 
-function HeroSection() {
+const HeroSection = () => {
     return (
-        <section className="hero-section">
+        <div className="hero-section">
             <div className="hero-content">
-                <div className="hero-text">
-                    <h1>Explore the World with Us</h1>
-                    <p>Discover amazing places and unique experiences.</p>
-                    <button>Start Your Journey</button>
-                </div>
-                <div className="hero-image">
-                    <img src="your-image-path.jpg" alt="Explore the world" />
-                </div>
+                <h1>Providing <span>Inspiration</span> Abroad</h1>
+                <p>Bring new inspiration to your travels with exclusive experiences around the world.</p>
             </div>
-        </section>
+        </div>
     );
-}
+};
 
 export default HeroSection;

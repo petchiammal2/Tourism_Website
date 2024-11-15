@@ -7,7 +7,7 @@ import swim from './Assets/swim.png';
 import chess from './Assets/chess.png';
 
 
-import './PackageDetail.css'; // Make sure to add your CSS for styling
+import './CSS/PackageDetail.css'; // Make sure to add your CSS for styling
 
 const PackageDetail = () => {
   return (

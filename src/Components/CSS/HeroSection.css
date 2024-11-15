@@ -1,6 +1,6 @@
 /* src/Components/HeroSection.css */
 .hero-section {
-    background-image: url('../Components/Assets/hero-image.jpg');
+    background-image: url('../../Assets/hero-image.jpg');
     background-size: cover;
     background-position: center;
     height: 60vh;

@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Service.css';
+import './CSS/Service.css';
 import tour from './Assets/tour.png';
 import hotel from './Assets/hotel.png';
 import transport from './Assets/transport.png';
-import StayPackage from './components/StayPackage';
+
 
 const services = [
   {

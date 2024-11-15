@@ -1,5 +1,5 @@
 import React from 'react';
-import './StayPackage.css';
+import './CSS/StayPackage.css';
 
 // Import images from the assets folder
 import img1 from './Assets/img1.jpg';

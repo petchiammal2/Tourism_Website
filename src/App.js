@@ -1,27 +1,25 @@
 
 import './App.css'
-import HeroSection from "./Components/Herosection";
-import Destinations from "./Components/Destinations"
+
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Home from "./components/Home";
-import About from "./components/About";
-import Blog from "./components/Blog";
-import Contact from "./components/Contact";
-import Layout from "./components/Layout";
-import Gallery from "./components/Gallery";
+import Home from "./Pages/Home";
+import About from "./Pages/About";
+import Blog from "./Pages/Blog";
+import Contact from "./Pages/Contact";
+import Layout from "./Components/Layout";
+import Gallery from "./Pages/Gallery";
 import './App.css';
-import Footer from "./components/Footer";
-import Header from "./components/Header";
+import Footer from "./Components/Footer";
+import Header from "./Components/Header";
 
 
 
 function App() {
   return (
     <div className="App">
-      <HeroSection/>
-      <Destinations/>
-
+    
+      
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
