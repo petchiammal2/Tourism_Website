@@ -1,17 +1,21 @@
+HomeSection1.js
+
+
+
 
 import React from 'react';
-import './CSS/HomeSection1.css';
+import './HomeSection1.css';
 
 function HomeSection1() {
     return (
         <section className="home-section">
             <div className="home-content">
                 <div className="home-image-outer-container">
-                    <div className="home-image">
-                        <img src="image1.jpeg" alt="Explore the world - Image 1" />
+                    <div className="home-image"> 
+                    <img src="/images-2.jpeg" alt="Explore the world" />
                     </div>
                     <div className="home-image">
-                        <img src="your-image-path2.jpg" alt="Explore the world - Image 2" />
+                    <img src="/images-3.jpeg" alt="Explore the world " />
                     </div>
                 </div>
                 <div className="home-text">
