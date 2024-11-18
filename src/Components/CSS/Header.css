@@ -1,69 +1,89 @@
-
-
+/* Basic Styling */
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Keeps logo on one side and nav links on the other */
   align-items: center;
-  padding: 5px 15px;  /* Reduced padding */
+  padding: 10px 20px;
   background-color: #333;
   color: #fff;
 }
 
 .logo {
-  font-size: 20px;  /* Reduced font size */
+  font-size: 1.5em;
   font-weight: bold;
 }
 
+/* Show the menu button for small screens */
 .menu-toggle {
-  font-size: 20px;  /* Reduced font size */
+  display: none; /* Hidden by default */
+  font-size: 1.5em;
   background: none;
   border: none;
   color: #fff;
   cursor: pointer;
-  display: none;
 }
 
+/* Navigation Links */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 15px;  /* Reduced gap between links */
+  gap: 20px; /* Adds space between links */
+  margin: 0;
 }
 
-.nav-links li a {
-  color: #fff;
+.nav-links li {
+  margin: 0;
+}
+
+.nav-links a {
   text-decoration: none;
-  padding: 5px 8px;  /* Reduced padding for links */
+  color: #fff;
+  transition: color 0.3s ease;
 }
 
-.nav-links li.active a {
-  border-bottom: 2px solid #fff;
+.nav-links a:hover {
+  color: #00bcd4; /* Highlight link on hover */
 }
 
+.nav-links .active {
+  color: #00bcd4; /* Highlight the active link */
+  font-weight: bold;
+}
+
+/* Responsive Dropdown Menu */
 .nav-links.open {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  background-color: #333;
+  border: 1px solid #555;
+  border-radius: 5px;
+  padding: 10px;
 }
 
-@media (max-width: 700px) {
+.nav-links.open li {
+  margin-bottom: 10px;
+}
+
+.nav-links.open li:last-child {
+  margin-bottom: 0;
+}
+
+/* For Mobile View */
+@media (max-width: 768px) {
   .menu-toggle {
-      display: block;
+      display: block; /* Show the menu toggle button */
   }
 
   .nav-links {
-      display: none;
+      display: none; /* Hide nav links */
       flex-direction: column;
-      position: absolute;
-      top: 50px;  /* Reduced top position */
-      left: 0;
-      width: 50%;
-      background-color: #333;
   }
+}
 
-  .nav-links.open {
-      display: flex;
-  }
-
-  .nav-links li {
-      text-align: center;
-      padding: 8px 0;  /* Adjusted padding */
-  }
+/* Ensure nav-links stay on the right side */
+.nav-links {
+  margin-right: auto; /* Push the nav links to the right */
 }
