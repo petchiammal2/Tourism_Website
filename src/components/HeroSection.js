@@ -1,8 +1,6 @@
-HeroSection.js
-
-
 import React from 'react';
-import './HeroSection.css';
+import './CSS/HeroSection.css';
+import Image1 from '../Assets/images-1.jpeg';  // Corrected path
 
 function HeroSection() {
     return (
@@ -14,7 +12,7 @@ function HeroSection() {
                     <button>Start Your Journey</button>
                 </div>
                 <div className="hero-image">
-                    <img src="/images-1.jpeg" alt="Explore the world" />
+                    <img src={Image1} alt="Explore the world" />
                 </div>
             </div>
         </section>
