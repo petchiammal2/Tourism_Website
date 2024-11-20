@@ -13,7 +13,7 @@ function Header() {
         <header>
             <nav>
                 <div className="logo">TourNest.com</div>
-                <button className="menu-toggle" onClick={toggleMenu}>
+                <button className="menu-toggle" onClick={toggleMenu} aria-label="Toggle Menu">
                     ☰
                 </button>
                 <ul className={`nav-links ${isMenuOpen ? "open" : ""}`}>
