@@ -1,55 +1,45 @@
 .about-page {
   font-family: Arial, sans-serif;
   color: #000000;
-  padding: 0 20px; /* Padding for better view on small screens */
+  padding: 0;
+  margin: 0;
 }
 
 .about-heading {
-  text-align: center; /* Center the heading */
+  text-align: center;
   font-size: 2.5rem;
   margin-top: 50px;
 }
 
 /* About Section */
+/* Container for the big image */
 .big-container {
   position: relative;
-  display: flex;
-  justify-content: center; /* Center the content horizontally */
-  align-items: center; /* Center the content vertically */
-  flex-wrap: wrap; /* Ensures images stack on small screens */
-  text-align: center; /* Optional: Ensure text inside is also centered */
+  width: 100%; /* Full width of the viewport */
+  overflow: hidden; /* Prevent overflow */
 }
 
-.image-container {
-  position: relative;
-  width: 48%; /* Each image takes up 48% of the space */
-  max-width: 500px; /* Max width for the images */
-}
-
+/* Styling for the big image */
 .big-image {
-  width: 100%;
-  height: auto; /* Keeps the image proportional */
-  display: block;
-  object-fit: cover; /* Ensures image is fully visible */
-  border-radius: 8px; /* Optional: rounds the image edges */
-  margin: 0 auto; /* Ensures the image is centered within its container */
+  width: 100%; /* Make the image span the full width */
+  height: 80vh; /* Set height relative to the viewport for a prominent display */
+  object-fit: cover; /* Ensure the image scales without distortion */
+  display: block; /* Remove extra spaces around the image */
 }
 
-/* Image Overlay (if needed) */
+/* Overlay styling */
 .image-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  background-color: none; /* No background color for overlay */
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: none;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 5px;
   text-align: center;
-  padding: 20px;
+  font-size: 2rem; /* Adjust font size for a prominent title */
+  font-weight: bold;
 }
 
 .image-overlay h2 {
@@ -134,17 +124,19 @@
 }
 
 /* Responsive Design */
+/* For Tablets and Small Desktops */
 @media (max-width: 768px) {
-  .big-container {
+  .three-images {
     flex-direction: column; /* Stack images vertically on smaller screens */
     align-items: center;
   }
 
-  .image-container {
-    width: 90%; /* Allow images to take up more space on small screens */
+  .image-text {
+    width: 100%; /* Full width for smaller screens */
+    margin-bottom: 20px;
   }
 
-  .image-text, .team-member {
+  .team-member {
     width: 100%;
   }
 
@@ -156,8 +148,13 @@
   .team-member h3 {
     font-size: 1.2rem;
   }
+
+  .big-image {
+    height: 50vh; /* Adjust height for smaller screens */
+  }
 }
 
+/* For Mobile Phones */
 @media (max-width: 480px) {
   .about-page {
     padding: 10px;
@@ -168,7 +165,7 @@
   }
 
   .big-image {
-    height: auto;
+    height: auto; /* Let image adjust naturally */
   }
 
   .image-overlay h2 {
@@ -177,5 +174,22 @@
 
   .overlay-description2 {
     font-size: 1rem;
+  }
+
+  .team-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .team-member h3 {
+    font-size: 1rem;
+  }
+
+  .image-text p {
+    font-size: 0.9rem;
+  }
+
+  .three-images {
+    gap: 10px; /* Smaller gap for mobile */
   }
 }

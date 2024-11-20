@@ -1,20 +1,24 @@
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom'; // Use NavLink for active class
-import './CSS/Header.css';
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
+import "./CSS/Header.css";
 
 function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const toggleMenu = () => {
-        setIsMenuOpen((prev) => !prev);
+        setIsMenuOpen(!isMenuOpen);
     };
 
     return (
         <header>
-            <nav>
+            <nav className="navbar">
                 <div className="logo">TourNest.com</div>
-                <button className="menu-toggle" onClick={toggleMenu} aria-label="Toggle Menu">
-                    ☰
+                <button
+                    className="menu-toggle"
+                    onClick={toggleMenu}
+                    aria-label="Toggle Menu"
+                >
+                    {isMenuOpen ? "✖" : "☰"}
                 </button>
                 <ul className={`nav-links ${isMenuOpen ? "open" : ""}`}>
                     <li>
@@ -37,20 +41,20 @@ function Header() {
                     </li>
                     <li>
                         <NavLink
-                            to="/services"
-                            className={({ isActive }) => (isActive ? "active" : "")}
-                            onClick={() => setIsMenuOpen(false)}
-                        >
-                            Services
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink
                             to="/blog"
                             className={({ isActive }) => (isActive ? "active" : "")}
                             onClick={() => setIsMenuOpen(false)}
                         >
                             Blog
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            to="/services"
+                            className={({ isActive }) => (isActive ? "active" : "")}
+                            onClick={() => setIsMenuOpen(false)}
+                        >
+                            Services
                         </NavLink>
                     </li>
                     <li>
