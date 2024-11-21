@@ -2,7 +2,7 @@ import React from 'react';
 import './CSS/HeroSection.css';
 import Image1 from '../Assets/images-1.jpeg';  // Corrected path
 
-function HeroSection() {
+function Section1() {
     return (
         <section className="hero-section">
             <div className="hero-content">
@@ -19,4 +19,4 @@ function HeroSection() {
     );
 }
 
-export default HeroSection;
+export default Section1;
