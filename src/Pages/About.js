@@ -32,7 +32,6 @@ const About = () => {
   return (
     <div className="about-page">
       {/* About Section */}
-     
       <div className="big-container">
         <div className="image-container">
           <img src={About2} alt="Tourism View" className="big-image" />
@@ -76,7 +75,6 @@ const About = () => {
       <div className="team-section">
         <h2 className="team-heading">Meet Our Team</h2>
         <div className="team-container">
-         
           <div className="team-member">
             <img src={MAN2} alt="Receptionist" className="team-image" />
             <h3>Jane Smith</h3>

@@ -21,8 +21,8 @@
 
 .home-image-outer-container {
   display: flex;
-  gap: 60px;
-  width: 50%; /* Set image container width to 50% */
+  gap: 50px;
+  width: 60%; /* Set image container width to 50% */
 }
 
 .home-image img {
