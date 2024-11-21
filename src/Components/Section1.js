@@ -2,7 +2,7 @@ import React from 'react';
 import './CSS/Section1.css';
 import image from '../Assets/pic2.jpg';  // adjust path based on where HeroSection.js is located
 
-function HeroSection() {
+function Section1() {
     return (
         <section className="hero-section">
             <div className="hero-content">
@@ -19,4 +19,4 @@ function HeroSection() {
     );
 }
 
-export default HeroSection;
+export default Section1;
