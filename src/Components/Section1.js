@@ -69,7 +69,7 @@ function Section1() {
         ))}
       </div>
 
-      {/* Dots for navigation */}
+    
       <div className="dots">
         {images.map((_, index) => (
           <span

@@ -15,7 +15,7 @@
 .scroll-container {
   display: flex; /* Arrange items horizontally */
   transition: transform 0.5s ease; /* Smooth transition between sections */
-  width: 300%; /* 3x viewport width for 3 sections */
+  width: 300%; 
   height: 100%; /* Full viewport height */
   scroll-snap-type: x mandatory; /* Snap behavior */
   overflow-x: scroll; /* Enable horizontal scrolling */
