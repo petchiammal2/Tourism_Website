@@ -1,24 +1,43 @@
-
-
+/* Section Container */
 .hero-section {
-  border-color: #01070e;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;
-  background-color:#c7bebb;
+  background-color: #c7bebb;
   text-align: center;
+  padding: 10px;
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
 }
 
-.hero-section .hero-content {
+/* Scroll Container */
+.scroll-container {
+  display: flex; /* Arrange items horizontally */
+  transition: transform 0.5s ease; /* Smooth transition between sections */
+  width: 300%; /* 3x viewport width for 3 sections */
+  height: 100%; /* Full viewport height */
+  scroll-snap-type: x mandatory; /* Snap behavior */
+  overflow-x: scroll; /* Enable horizontal scrolling */
+  scroll-behavior: smooth;
+  scrollbar-width: thin; /* Make the scrollbar thin */
+  scrollbar-color: #717171 #c7bebb; /* Custom scrollbar color */
+}
+
+/* Individual Section */
+.hero-content {
+  flex: 0 0 100%; /* Each section takes up 100% of the viewport */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  padding: 10px;
   max-width: 1200px;
+  margin: auto;
+  scroll-snap-align: start; /* Snap to start of each section */
 }
 
-.hero-section .hero-text {
+/* Text Section */
+.hero-text {
   max-width: 900px;
   color: #000000;
 }
@@ -50,27 +69,56 @@
   background-color: #b0c1d6;
 }
 
-.hero-section .hero-image {
+/* Image Section */
+/* Image Section */
+.hero-image {
   width: 700px;
   height: 400px;
+  overflow: hidden; /* Ensures the border-radius is applied properly */
+  border-radius: 20px; /* Add curved edges to the container */
 }
 
-.hero-section .hero-image img {
+.hero-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 20px; /* Add curved edges to the image */
+}
+
+
+/* Dot Navigation */
+.dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #bbb;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #717171;
 }
 
 /* Media Query for Mobile View */
 @media (max-width: 768px) {
-  .hero-section .hero-content {
-    flex-direction: column; /* Stacks text and image vertically */
-    align-items: center;
+  .hero-content {
+    flex-direction: column; /* Stack text and image vertically */
+    text-align: center;
   }
-  
-  .hero-section .hero-image {
+
+  .hero-image {
     width: 100%;
     height: auto;
-    margin-top: 50px; /* Adds spacing between text and image */
+    margin-top: 20px;
   }
 }
