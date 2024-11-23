@@ -1,0 +1,124 @@
+/* Section Container */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #c7bebb;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+}
+
+/* Scroll Container */
+.scroll-container {
+  display: flex; /* Arrange items horizontally */
+  transition: transform 0.5s ease; /* Smooth transition between sections */
+  width: 300%; 
+  height: 100%; /* Full viewport height */
+  scroll-snap-type: x mandatory; /* Snap behavior */
+  overflow-x: scroll; /* Enable horizontal scrolling */
+  scroll-behavior: smooth;
+  scrollbar-width: thin; /* Make the scrollbar thin */
+  scrollbar-color: #717171 #c7bebb; /* Custom scrollbar color */
+}
+
+/* Individual Section */
+.hero-content {
+  flex: 0 0 100%; /* Each section takes up 100% of the viewport */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  max-width: 1200px;
+  margin: auto;
+  scroll-snap-align: start; /* Snap to start of each section */
+}
+
+/* Text Section */
+.hero-text {
+  max-width: 900px;
+  color: #000000;
+}
+
+.hero-section h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.hero-section p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.hero-section button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #9a9ea3;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.hero-section button:hover {
+  background-color: #b0c1d6;
+}
+
+/* Image Section */
+/* Image Section */
+.hero-image {
+  width: 700px;
+  height: 400px;
+  overflow: hidden; /* Ensures the border-radius is applied properly */
+  border-radius: 20px; /* Add curved edges to the container */
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px; /* Add curved edges to the image */
+}
+
+
+/* Dot Navigation */
+.dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #bbb;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #717171;
+}
+
+/* Media Query for Mobile View */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column; /* Stack text and image vertically */
+    text-align: center;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+}

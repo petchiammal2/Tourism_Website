@@ -1,40 +1,23 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './CSS/About.css'; // Import CSS for styling
 
 // Import images from the Assets folder
-import About1 from '../Assets/about1.jpg';
-import About2 from '../Assets/about2.jpg';
+import About6 from '../Assets/about0.webp';
 import About3 from '../Assets/about3.jpg';
 import About4 from '../Assets/about4.jpg';
 import About5 from '../Assets/about5.jpg';
 
 // Manager and Worker Images
-import MAN1 from '../Assets/man1.jpg';
 import MAN2 from '../Assets/man2.jpg';
 import MAN3 from '../Assets/man3.jpg';
 
 const About = () => {
-  const [checkInDate, setCheckInDate] = useState('');
-  const [checkOutDate, setCheckOutDate] = useState('');
-  const [rooms, setRooms] = useState(1);
-  const [adults, setAdults] = useState(1);
-  const [children, setChildren] = useState(0);
-
-  const handleAvailability = () => {
-    alert(`Checking availability for:
-      Check-in: ${checkInDate}
-      Check-out: ${checkOutDate}
-      Rooms: ${rooms}
-      Adults: ${adults}
-      Children: ${children}`);
-  };
-
   return (
     <div className="about-page">
       {/* About Section */}
       <div className="big-container">
         <div className="image-container">
-          <img src={About2} alt="Tourism View" className="big-image" />
+          <img src={About6} alt="Tourism View" className="big-image" />
           <div className="image-overlay">
             <h2>About Us</h2>
           </div>
