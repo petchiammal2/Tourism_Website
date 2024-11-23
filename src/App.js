@@ -8,19 +8,14 @@ import Blog from "./Pages/Blog";
 import Contact from "./Pages/Contact";
 import Layout from "./Components/Layout";
 import Gallery from "./Pages/Gallery";
-
 import Header from './Components/Header';
-import HeroSection from' ./Components/HeroSection';
-import HomeSection1 from'./Components/HomeSection1';
 import Footer from "./Components/Footer";
-import HomeSection1 from './Components/HomeSection1';
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <HeroSection/>
-      <HomeSection1/>
+ 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />

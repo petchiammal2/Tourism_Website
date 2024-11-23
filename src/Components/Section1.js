@@ -1,3 +1,4 @@
+
 import React, { useState, useRef, useEffect } from 'react';
 import './CSS/Section1.css';
 import image1 from '../Assets/pic2.jpg';  // Adjust the path as needed
@@ -81,6 +82,7 @@ function Section1() {
       </div>
     </section>
   );
+
 }
 
 export default Section1;

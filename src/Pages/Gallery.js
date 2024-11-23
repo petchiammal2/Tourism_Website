@@ -1,8 +1,9 @@
-
+import GalleryHero from "../Components/GalleryHero";
 const Gallery = () => {
     return (
       <>
-      <h1>This page for Gallery</h1>
+      <GalleryHero />
+      
       </>
     )
   };
