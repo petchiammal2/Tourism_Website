@@ -1,13 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import wicon from './Assets/wicon.png';
-import cicon from './Assets/cicon.png';
-import food from './Assets/food.png';
-import swim from './Assets/swim.png';
-import chess from './Assets/chess.png';
-
-
-import './CSS/PackageDetail.css'; // Make sure to add your CSS for styling
+import wicon from './Assets/wicon.webp';
+import cicon from './Assets/cicon.webp';
+import food from './Assets/food.webp';
+import swim from './Assets/swim.webp';
+import chess from './Assets/chess.webp';
+import './PackageDetail.css'; // Make sure to add your CSS for styling
 
 const PackageDetail = () => {
   return (
@@ -91,16 +89,8 @@ const PackageDetail = () => {
           </ul>  
         </div>
       </div>
-      <div className="floating-buttons">
-        <a href="https://wa.me/1234567890" target="_blank" className="whatsapp-button">
-        <img src={wicon} alt="Tour image" />
-        </a>
-        <a href="tel:+1234567890" className="call-button">
-        <img src={cicon} alt="Tour image" />
-        </a>
-      </div>
       <div className="get-in-touch-container">
-        <Link to="/contact" className="get-in-touch-button">Get in Touch</Link>
+        <Link to="/Contact" className="get-in-touch-button">Get in Touch</Link>
       </div>
     </div>
   );
