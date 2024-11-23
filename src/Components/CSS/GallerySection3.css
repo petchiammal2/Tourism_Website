@@ -42,7 +42,7 @@
     border-radius: 8px; /* Optional rounded corners */
 }
 
-.gallery-img.gallery-img:hover {
+.gallery-img:hover {
     transform: scale(1.05); /* Slight zoom on hover */
 }
 
