@@ -11,6 +11,17 @@ import About5 from '../Assets/about5.jpg';
 import MAN2 from '../Assets/man2.jpg';
 import MAN3 from '../Assets/man3.jpg';
 
+// Reusable Team Member Component
+const TeamMember = ({ imgSrc, name, role, email, phone }) => (
+  <div className="team-member">
+    <img src={imgSrc} alt={`${role}`} className="team-image" />
+    <h3>{name}</h3>
+    <p>{role}</p>
+    <p>Email: <a href={`mailto:${email}`}>{email}</a></p>
+    <p>Phone: <a href={`tel:${phone}`}>{phone}</a></p>
+  </div>
+);
+
 const About = () => {
   return (
     <div className="about-page">
@@ -18,19 +29,21 @@ const About = () => {
       <div className="big-container">
         <div className="image-container">
           <img src={About6} alt="Tourism View" className="big-image" />
-          <div className="image-overlay">
+          <div className="image-overlay" aria-label="Overlay text">
             <h2>About Us</h2>
           </div>
         </div>
       </div>
 
-      <p className="overlay-description2">
+      <section className="overlay-description">
         <h2>Discover the World Through Travel</h2>
-        Welcome to our tourism website, your gateway to exploring breathtaking destinations around the globe. From serene beaches and lush mountains to historic landmarks and vibrant cities, our platform brings you closer to the wonders of the world. Let your wanderlust lead the way!
-      </p>
+        <p>
+          Welcome to our tourism website, your gateway to exploring breathtaking destinations around the globe. From serene beaches and lush mountains to historic landmarks and vibrant cities, our platform brings you closer to the wonders of the world. Let your wanderlust lead the way!
+        </p>
+      </section>
 
       {/* Three Images Section */}
-      <div className="three-images">
+      <section className="three-images">
         <div className="image-text">
           <img src={About3} alt="Experience Nature" className="small-image" />
           <h3>Experience Nature</h3>
@@ -52,35 +65,35 @@ const About = () => {
             Seek hidden adventures, from green fields to rivers and hills, each moment filled with stories and surprises.
           </p>
         </div>
-      </div>
+      </section>
 
       {/* Team Section */}
-      <div className="team-section">
+      <section className="team-section">
         <h2 className="team-heading">Meet Our Team</h2>
         <div className="team-container">
-          <div className="team-member">
-            <img src={MAN2} alt="Receptionist" className="team-image" />
-            <h3>Jane Smith</h3>
-            <p>Manager</p>
-            <p>Email: jane.smith@example.com</p>
-            <p>Phone: +123 456 7891</p>
-          </div>
-          <div className="team-member">
-            <img src={MAN3} alt="Housekeeping" className="team-image" />
-            <h3>Emily Davis</h3>
-            <p>Guide</p>
-            <p>Email: emily.davis@example.com</p>
-            <p>Phone: +123 456 7892</p>
-          </div>
+          <TeamMember
+            imgSrc={MAN2}
+            name="Jane Smith"
+            role="Manager"
+            email="jane.smith@example.com"
+            phone="+1234567891"
+          />
+          <TeamMember
+            imgSrc={MAN3}
+            name="Emily Davis"
+            role="Guide"
+            email="emily.davis@example.com"
+            phone="+1234567892"
+          />
         </div>
-      </div>
+      </section>
 
       {/* Footer Section */}
-      <div className="subscript">
+      <footer className="subscript">
         <hr />
         <p>Copyright ©2023 Mr. Vinoth Kumar. All Rights Reserved.</p>
         <p>Follow Me</p>
-      </div>
+      </footer>
     </div>
   );
 };
