@@ -1,0 +1,59 @@
+/* General container styling */
+.image-containers {
+    padding: 30px;
+    text-align: center;
+}
+  
+/* Title styling */
+.image-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px; /* Center-aligned title */
+    color: #000; /* Black text color */
+    text-align: center;
+    justify-content: center; /* Center-align the rows */
+}
+  
+/* Row-wise layout */
+.image-grid {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px; /* Space between images */
+    justify-content: center; /* Center-align the rows */
+    align-items: flex-start; /* Align items at the top */
+}
+
+/* Individual gallery item */
+.image-item {
+    flex: 1 1 auto; /* Allow items to grow/shrink */
+    min-width: 250px; /* Minimum width for images */
+    max-width: 100%; /* Prevent overflow */
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Image styling */
+.gallery-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optional rounded corners */
+}
+
+.gallery-img.gallery-img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .gallery-title {
+        font-size: 1.5rem;
+    }
+    .gallery-grid {
+        gap: 10px;
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center; /* Center-align the stacked items */
+    }
+}
