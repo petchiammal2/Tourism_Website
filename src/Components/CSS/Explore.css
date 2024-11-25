@@ -1,4 +1,4 @@
-/* Main container for the Explore page */
+/* General Styles */
 .explore-container {
   font-family: 'Arial', sans-serif;
   margin: 0;
@@ -8,9 +8,10 @@
   align-items: center;
   background-color: #f5f5f5;
 }
+
 .explore-header {
   width: 100%;
-  background-color:lightgrey;
+  background-color: lightgrey;
   padding: 20px 0;
   text-align: center;
   border-bottom: 2px solid #ccc;
@@ -28,96 +29,187 @@
   margin: 20px auto;
 }
 
-
-  
-  /* Sidebar styling */
-  .sidebar {
-    width: 25%;
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Sidebar header styling (smaller length) */
-.sidebar h2 {
-  font-size: 18px; /* Smaller font size */
-  margin-bottom: 10px; /* Reduced margin */
+.sidebar {
+  width: 25%;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-  
-  .sidebar p {
-    font-size: 16px;
-    margin-bottom: 10px;
+.sidebar h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.sidebar p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.sidebar ul li:hover {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.sidebar button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.sidebar button:hover {
+  background-color: #0056b3;
+}
+
+.destination-grid {
+  width: 75%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.destination-card {
+  position: relative;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+  padding: 10px;
+}
+
+.destination-card:hover {
+  transform: scale(1.05);
+}
+
+.destination-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-bottom: 2px solid #f0f0f0;
+  border-radius: 8px 8px 0 0;
+}
+
+.destination-card h3 {
+  margin: 10px 0 0 0;
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+/* Responsive Styles */
+
+/* For Laptop and Tablet view (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .explore-content {
+    flex-direction: column; /* Stack sidebar and grid vertically */
   }
-  
-  .sidebar ul {
-    list-style: none;
-    padding: 0;
+
+  .sidebar {
+    width: 100%; /* Full width sidebar */
+    margin-bottom: 20px; /* Space below sidebar */
   }
-  
-  .sidebar ul li {
-    margin-bottom: 10px;
-    font-size: 14px;
-    cursor: pointer;
-  }
-  
-  .sidebar ul li:hover {
-    color: #007bff;
-    text-decoration: underline;
-  }
-  
-  .sidebar button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .sidebar button:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Destination grid styling */
+
   .destination-grid {
-    width: 75%;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Makes the layout responsive */
-    gap: 20px; /* Space between cards */
-    padding: 20px;
-  }
-  
-  /* Individual card styling */
-  .destination-card {
-    position: relative;
-    background-color: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow for separation */
-    transition: transform 0.3s ease;
-    text-align: center;
-    padding: 10px;
-  }
-  
-  .destination-card:hover {
-    transform: scale(1.05); /* Hover effect for zoom-in */
-  }
-  
-  .destination-card img {
     width: 100%;
-    height: 150px;
-    object-fit: cover; /* Ensures the image fits inside the box without distortion */
-    border-bottom: 2px solid #f0f0f0;
-    border-radius: 8px 8px 0 0; /* Rounds only the top corners */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
-  
+
+  .destination-card img {
+    height: 120px;
+  }
+
   .destination-card h3 {
-    margin: 10px 0 0 0;
-    font-size: 16px;
-    color: #333;
-    font-weight: bold;
-    text-transform: capitalize;
+    font-size: 14px;
   }
-  
+}
+
+/* For Tablet and Large Mobile view (max-width: 768px) */
+@media (max-width: 768px) {
+  .explore-header h1 {
+    font-size: 2rem;
+  }
+
+  .destination-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+
+  .sidebar {
+    padding: 15px;
+  }
+
+  .sidebar h2 {
+    font-size: 16px;
+  }
+
+  .sidebar ul li {
+    font-size: 12px;
+  }
+
+  .sidebar button {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+}
+
+/* For Mobile view (max-width: 480px) */
+@media (max-width: 480px) {
+  .explore-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .explore-content {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%; /* Full width sidebar */
+    margin-bottom: 20px;
+  }
+
+  .destination-grid {
+    width: 100%;
+    grid-template-columns: 1fr; /* Single column grid */
+    gap: 15px;
+  }
+
+  .destination-card img {
+    height: 100px; /* Smaller images for mobile */
+  }
+
+  .destination-card {
+    padding: 8px; /* Compact padding for cards */
+  }
+
+  .destination-card h3 {
+    font-size: 12px; /* Smaller font size */
+  }
+
+  .sidebar h2,
+  .sidebar ul li,
+  .sidebar button {
+    font-size: 12px;
+  }
+
+  .sidebar button {
+    padding: 6px 12px;
+  }
+}
