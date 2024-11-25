@@ -14,8 +14,7 @@
 /* Scroll Container */
 .scroll-container {
   display: flex; /* Arrange items horizontally */
-  transition: transform 0.5s ease; /* Smooth transition between sections */
-  width: 300%; 
+  width: 300%;
   height: 100%; /* Full viewport height */
   scroll-snap-type: x mandatory; /* Snap behavior */
   overflow-x: scroll; /* Enable horizontal scrolling */
@@ -36,34 +35,35 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
-  max-width: 1200px;
+  padding: 20px;
+  max-width: 1400px; /* Adjusted for 1500px screens */
   margin: auto;
   scroll-snap-align: start; /* Snap to start of each section */
 }
 
 /* Text Section */
 .hero-text {
-  max-width: 900px;
+  max-width: 500px;
   color: #000000;
+  text-align: left; /* Align text to the left */
 }
 
 .hero-section h1 {
-  font-size: 48px;
+  font-size: 3rem; /* Adjusted font size for responsiveness */
   font-weight: bold;
   margin-bottom: 20px;
   color: #000000;
 }
 
 .hero-section p {
-  font-size: 18px;
+  font-size: 1.2rem; /* Adjusted font size */
   margin-bottom: 20px;
   color: #000000;
 }
 
 .hero-section button {
   padding: 10px 20px;
-  font-size: 16px;
+  font-size: 1rem;
   background-color: #9a9ea3;
   color: rgb(0, 0, 0);
   border: none;
@@ -77,8 +77,8 @@
 
 /* Image Section */
 .hero-image {
-  width: 700px;
-  height: 400px;
+  width: 50%; /* Adjusted width for better responsiveness */
+  height: auto;
   overflow: hidden; /* Ensures the border-radius is applied properly */
   border-radius: 20px; /* Add curved edges to the container */
 }
@@ -93,11 +93,12 @@
 /* Dot Navigation */
 .dots {
   position: absolute;
-  bottom: 20px;
+  bottom: 15px; /* Positioned for better responsiveness */
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   gap: 10px;
+  z-index: 10; /* Ensure dots stay above other content */
 }
 
 .dot {
@@ -113,16 +114,96 @@
   background-color: #717171;
 }
 
-/* Media Query for Mobile View */
-@media (max-width: 768px) {
+/* Media Query for Large Screens (1440px to 1500px) */
+@media (min-width: 1440px) {
+  .hero-content {
+    max-width: 1500px;
+    padding: 30px;
+  }
+
+  .hero-text {
+    max-width: 600px;
+  }
+
+  .hero-section h1 {
+    font-size: 4rem;
+  }
+
+  .hero-section p {
+    font-size: 1.4rem;
+  }
+
+  .hero-image {
+    width: 55%; /* Larger images for large screens */
+  }
+
+  .dots {
+    bottom: 20px; /* Slightly move dots lower */
+  }
+}
+
+/* Media Query for Tablets and Small Laptops */
+@media (max-width: 1024px) {
   .hero-content {
     flex-direction: column; /* Stack text and image vertically */
     text-align: center;
   }
 
   .hero-image {
-    width: 100%;
+    width: 90%;
     height: auto;
     margin-top: 20px;
+  }
+
+  .hero-text {
+    max-width: 700px;
+    text-align: center; /* Center align text for tablets */
+  }
+
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-section p {
+    font-size: 1.1rem;
+  }
+
+  .dots {
+    bottom: 15px; /* Adjust position for tablets */
+  }
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  .hero-text {
+    padding: 0 15px;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+
+  .hero-section button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .hero-image {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .dots {
+    bottom: 10px;
+    gap: 8px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
   }
 }
