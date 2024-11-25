@@ -12,7 +12,7 @@ const images = [Image1,Image2,Image3,Image4,Image5,Image6];
 const Gallery2 = () => {
   return (
     <div className="gallery-containers">
-      <h1 className="gallery-title">Our Outreach Photos</h1>
+      <h1 className="gallery-title">Fire Camp Event Photos</h1>
       <div className="gallery-grid">
         {images.map((image, index) => (
           <div className="gallery-item" key={index}>
