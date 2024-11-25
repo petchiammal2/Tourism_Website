@@ -1,130 +1,106 @@
-.container {
-  display: flex;
-  padding: 20px;
-  background-color: #d6d4d4;
-}
+/* ContactPage.css */
 
-.left {
-  flex: 1;
-  padding: 20px;
-  margin-top: 10px;
-  position: relative;
-
-}
-
-.header {
-  color:#333;
-  font-size: 55px;
-}
-
-.subHeader {
-  color:white;
-  font-size: 45px;
-}
-
-.description {
-  font-size: 25px;
-  color: #555;
-  margin-top: 10px;
-}
-
-.contactInfo {
-  font-size: 20px;
+.contact-page {
+  font-family: Arial, sans-serif;
   color: #333;
-  line-height: 1.8;
+  background-color:white;
 }
 
-.icon {
-  margin-right: 5px;
+.cover-image {
+  background: url('Assets/transportation.webp') no-repeat center center/cover;
+  color:rgb(17, 16, 16);
+  text-align: center;
+  padding: 80px 20px;
 }
 
-.whatsappButton {
-  width:80px;
-  height:80px;
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #25D366;
-  color: #fff;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  margin-left: 10px;
-  margin-bottom: 50px;
-  position: fixed;
-}
-
-.right {
-  flex: 1;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-right: 1px solid #ddd;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-}
-
-.label {
+.cover-image h1 {
+  font-size: 4rem;
   margin-bottom: 10px;
-  font-size: 16px;
 }
 
-.input {
-  padding: 10px;
-  font-size: 16px;
-  margin-bottom: 20px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+.cover-image p {
+  font-size: 1.5rem;
 }
 
-.button {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #007BFF;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-/* Mobile view (screens up to 768px wide) */
-@media (max-width: 768px) {
-.container {
-  flex-direction: column;
-  padding: 10px;
+.contact-container {
+  display: flex;
+  height:400px;
+  padding: 60px 20px;
+  gap: 20px 10px ;
+  border-radius: 15px;
+  margin:20px 10px;
+  background-color:#d6d4d4;
+  position:relative;
 }
 
-.left, .right {
-  padding: 10px;
+.contact-left,
+.contact-right {
+  flex: 1;
+}
+
+.contact-left h2 {
+  margin-top: 10px;
+  font-size:3rem;
+  word-break:break-word;
+}
+
+.contact-left h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.contact-info {
   margin-top: 10px;
 }
 
-.header {
-  font-size: 40px;
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
-.subHeader {
-  font-size: 35px;
+.info-item img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
 }
 
-.description, .contactInfo {
-  font-size: 18px;
+.contact-right input,
+.contact-right textarea {
+  width: 500px;
+  height:50px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-left:30px;
+  position:relatived;
+}
+.contact-right button {
+  width:500px;
+  height:50px;
+  background-color:#333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left:30px;
 }
 
-
-
-.input, .button {
-  font-size: 14px;
-  padding: 8px;
+.contact-right button:hover {
+  background-color: #555;
 }
 
-.button {
-  padding: 10px 15px;
+.map-section {
+  margin-top: 20px;
+  position: relative;
 }
+
+.map-details {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
 }
-
-
-
-
-
-
