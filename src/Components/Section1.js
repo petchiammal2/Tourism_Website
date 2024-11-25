@@ -50,7 +50,7 @@ function Section1() {
     return () => {
       scrollContainerRef.current.removeEventListener('scroll', handleScroll);
     };
-  });
+  }, []);
 
   return (
     <section className="hero-section">
@@ -70,7 +70,7 @@ function Section1() {
         ))}
       </div>
 
-    
+      {/* Dot Navigation */}
       <div className="dots">
         {images.map((_, index) => (
           <span
