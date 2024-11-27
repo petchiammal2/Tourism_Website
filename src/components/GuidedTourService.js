@@ -1,16 +1,10 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,Link } from "react-router-dom";
+import transportation from './Assets/transportation.webp';
 import "./GuidedTourService.css";
-import handleWhatsAppMessage from "./WCintegration";
-// import transportation from "./Assets/transportation.jpg";
 
 const GuidedTourService = () => {
   const [activeFAQ, setActiveFAQ] = useState(null);
-  const navigate = useNavigate();
-
-  const handleBooking = () => {
-    navigate("/Contact");
-  };
 
   const toggleFAQ = (index) => {
     setActiveFAQ(activeFAQ === index ? null : index);
@@ -21,11 +15,12 @@ const GuidedTourService = () => {
       {/* Hero Section */}
       <section className="hero-section">
         <div className="hero-content">
+          <img src={transportation} alt="Hero Content" />
           <h1>Explore the Wonders</h1>
           <p>Join our expert-led guided tour to experience the magic of the City of Lights.</p>
-          <button className="cta-button" onClick={handleWhatsAppMessage}>
+          <Link to ="/Contact1" className="cta-link">
             Book Now
-          </button>
+          </Link>
         </div>
       </section>
 
@@ -83,12 +78,11 @@ const GuidedTourService = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="cta-section">
+      <div className="cta-section">
         <h2>Ready to Explore ?</h2>
-        <Link to="/GuidedTourDetail">
-        <button className="cta-button" onClick={handleBooking}>More Detail</button>
+        <Link to= "/GuidedTourDetail" className="cta-button" >More Detail
         </Link>
-      </section>
+      </div>
     </div>
   );
 };

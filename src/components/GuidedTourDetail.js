@@ -1,13 +1,9 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { handleWhatsAppMessage } from './WCintegration';
 import "./GuidedTourDetail.css";
 
 const GuidedTourDetail = () => {
-  const navigate = useNavigate();
-
-  const handleBooking = () => {
-    navigate("/Contact");
-  };
 
   return (
     <div className="guided-tour-details">
@@ -54,10 +50,7 @@ const GuidedTourDetail = () => {
       </section>
 
       <div className="details-footer">
-        <link to="/Contact"></link>
-        <button className="cta-button" onClick={handleBooking}>
-          Book Now
-        </button>
+      <button className="cta-button" >Book NoW</button>
       </div>
     </div>
   );

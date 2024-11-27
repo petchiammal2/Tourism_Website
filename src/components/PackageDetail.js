@@ -1,18 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import wicon from './Assets/wicon.webp';
-import cicon from './Assets/cicon.webp';
+import { useNavigate,Link } from "react-router-dom";
 import food from './Assets/food.webp';
 import swim from './Assets/swim.webp';
 import chess from './Assets/chess.webp';
-import './PackageDetail.css'; // Make sure to add your CSS for styling
+import transportation from './Assets/transportation.webp';
+import handleWhatsAppMessage from './WCintegration';
+import './PackageDetail.css';
+
 
 const PackageDetail = () => {
   return (
     <div className="package-detail-container">
       {/* Heading */}
+      <div className='package-detail-heading'>
+      <img src={transportation} alt="HeroSectionImage" /> 
       <h2 className="package-detail-heading">Discover The Benefits</h2>
-      <h4 className="package-detail-heading">Our Stay Packgae</h4>
+      <h4 className="package-detail-heading">Our Stay Packgae</h4></div>
 
       {/* Grid of 5 Categories */}
       <div className="package-category-grid">
@@ -77,7 +80,7 @@ const PackageDetail = () => {
           <ul><li><p>Backwater.</p></li>
           <li><p>Disney Park.</p></li>
           <li><p>Crocodile park.</p></li>
-          </ul>  
+          </ul>
         </div>
         <div className="package-detail-item">
           <h3>Note</h3>
@@ -90,7 +93,7 @@ const PackageDetail = () => {
         </div>
       </div>
       <div className="get-in-touch-container">
-        <Link to="/Contact" className="get-in-touch-button">Get in Touch</Link>
+        <button onClick={handleWhatsAppMessage} className="get-in-touch-button">Get in Touch</button>
       </div>
     </div>
   );

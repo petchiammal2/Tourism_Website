@@ -1,14 +1,11 @@
 import React from 'react';
+import { useNavigate,Link } from "react-router-dom";
 import './StayPackage.css';
-// Import images from the assets folder
 import img1 from './Assets/img1.webp';
 import img2 from './Assets/img2.webp';
 import img3 from './Assets/img3.webp';
 import img4 from './Assets/img4.webp';
 import img5 from './Assets/img5.webp';
-import wicon from './Assets/wicon.webp';
-import cicon from './Assets/cicon.webp';
-// Package data with imported images
 const packages = [
   {
     id: 1,

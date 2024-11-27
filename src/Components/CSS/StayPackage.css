@@ -8,17 +8,20 @@
 
 .page-title {
   font-size: 2rem;
+  margin-top:20px;
+  /* background-color:white; */
 }
 .page-title span {
   color:white;
 }  
 .package-grid {
   display: grid;
+  justify-content: space-around;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, auto);
   gap: 20px;
+  padding:10px;
 }
-
 
 .package-card {
   background-color: white;
@@ -44,7 +47,9 @@
   font-size:20px;
   
 }
-
+.package-card:hover {
+  transform: scale(1.05); /* Zoom effect on hover */
+}
 .check-all-packages-btn {
   padding: 10px 20px;
   font-size:15px;
@@ -128,4 +133,3 @@ font-size: 1rem;
   font-size: 1.05rem;
 }
 }
-
