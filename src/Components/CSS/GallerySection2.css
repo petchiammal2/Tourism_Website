@@ -41,6 +41,7 @@
     height: auto;
     display: block;
     border-radius: 8px; /* Optional rounded corners */
+    max-height: 650px; /* Maximum width for large screens */
 }
 
 .gallery-images:hover {
@@ -58,3 +59,10 @@
         align-items: center; /* Center-align the stacked items */
     }
 }
+@media screen and (min-width: 1024px) {
+    .gallery-item{
+      width: 400px; /* Larger size for laptops */
+      height: 300px;
+    }
+  }
+

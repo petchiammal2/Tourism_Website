@@ -33,3 +33,27 @@
   font-size: 1.2rem;
   line-height: 1.5;
 }
+@media (max-width: 768px) {
+  .gallery-text h1 {
+    font-size: 2rem;
+  }
+
+  .gallery-text p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+}
+@media (max-width: 480px) {
+  .gallery-text h1 {
+    font-size: 1.5rem;
+  }
+  .gallery-text p {
+    font-size: 0.6rem;
+    line-height: 1.5;
+
+  }
+}
+
+
+
+
