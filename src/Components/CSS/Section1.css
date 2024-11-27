@@ -1,3 +1,11 @@
+/* General Reset and Box-Sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
 /* Section Container */
 .hero-section {
   display: flex;
@@ -7,58 +15,58 @@
   text-align: center;
   padding: 10px;
   position: relative;
-  height: 100vh; /* Full viewport height */
+  min-height: 100vh; /* Ensures the section covers the full viewport height */
   overflow: hidden;
 }
 
 /* Scroll Container */
 .scroll-container {
-  display: flex; /* Arrange items horizontally */
+  display: flex;
   width: 300%;
-  height: 100%; /* Full viewport height */
-  scroll-snap-type: x mandatory; /* Snap behavior */
-  overflow-x: scroll; /* Enable horizontal scrolling */
+  height: 100%;
+  scroll-snap-type: x mandatory; 
+  overflow-x: scroll;
   scroll-behavior: smooth;
-
-  /* Hide scrollbars */
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* Internet Explorer and Edge */
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .scroll-container::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+  display: none;
 }
 
 /* Individual Section */
 .hero-content {
-  flex: 0 0 100%; /* Each section takes up 100% of the viewport */
+  flex: 0 0 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 20px;
-  max-width: 1400px; /* Adjusted for 1500px screens */
+  max-width: 1400px;
   margin: auto;
-  scroll-snap-align: start; /* Snap to start of each section */
+  scroll-snap-align: start;
+  gap: 20px;
 }
 
 /* Text Section */
 .hero-text {
   max-width: 500px;
-  color: #000000;
-  text-align: left; /* Align text to the left */
+  color: #000;
+  text-align: left;
 }
 
 .hero-section h1 {
-  font-size: 3rem; /* Adjusted font size for responsiveness */
+  font-size: 3rem;
   font-weight: bold;
   margin-bottom: 20px;
-  color: #000000;
+  color: #000;
 }
 
 .hero-section p {
-  font-size: 1.2rem; /* Adjusted font size */
+  font-size: 1.2rem;
   margin-bottom: 20px;
-  color: #000000;
+  color: #000;
 }
 
 .hero-section button {
@@ -77,28 +85,34 @@
 
 /* Image Section */
 .hero-image {
-  width: 50%; /* Adjusted width for better responsiveness */
+  width: 50%;
   height: auto;
-  overflow: hidden; /* Ensures the border-radius is applied properly */
-  border-radius: 20px; /* Add curved edges to the container */
+  overflow: hidden;
+  border-radius: 20px;
 }
 
 .hero-image img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 20px; /* Add curved edges to the image */
+  height: auto;
+  overflow: hidden;
+  border-radius: 20px;
 }
 
 /* Dot Navigation */
 .dots {
   position: absolute;
-  bottom: 15px; /* Positioned for better responsiveness */
+  bottom: 15px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   gap: 10px;
-  z-index: 10; /* Ensure dots stay above other content */
+  z-index: 10;
+  opacity: 1; /* Initially visible */
+  transition: opacity 0.3s ease; /* Smooth transition for hiding/showing */
+}
+
+.dots.hide {
+  opacity: 0; /* Hide dots when scrolling */
 }
 
 .dot {
@@ -114,50 +128,78 @@
   background-color: #717171;
 }
 
-/* Media Query for Large Screens (1440px to 1500px) */
-@media (min-width: 1440px) {
+/* Media Queries */
+
+/* 1500px screen */
+@media (min-width: 1500px) {
+  .hero-content {
+    max-width: 1600px; /* Increase the max width */
+    padding: 40px; /* Adjust padding */
+  }
+
+  .hero-text {
+    max-width: 700px; /* Increase text area width */
+  }
+
+  .hero-section h1 {
+    font-size: 4.5rem; /* Increase font size */
+  }
+
+  .hero-section p {
+    font-size: 1.5rem; /* Larger paragraph font size */
+  }
+
+  .hero-image {
+    width: 55%; /* Increase image width */
+  }
+
+  .dots {
+    bottom: 30px; /* Adjust position of dots */
+  }
+}
+
+/* 1440px - 1500px screen */
+@media (min-width: 1440px) and (max-width: 1499px) {
   .hero-content {
     max-width: 1500px;
     padding: 30px;
   }
 
   .hero-text {
-    max-width: 600px;
+    max-width: 600px; /* Increase text area width */
   }
 
   .hero-section h1 {
-    font-size: 4rem;
+    font-size: 4rem; /* Adjust font size */
   }
 
   .hero-section p {
-    font-size: 1.4rem;
+    font-size: 1.4rem; /* Slightly larger font size */
   }
 
   .hero-image {
-    width: 55%; /* Larger images for large screens */
+    width: 55%; /* Increase image width */
   }
 
   .dots {
-    bottom: 20px; /* Slightly move dots lower */
+    bottom: 25px; /* Adjust position of dots */
   }
 }
 
-/* Media Query for Tablets and Small Laptops */
 @media (max-width: 1024px) {
   .hero-content {
-    flex-direction: column; /* Stack text and image vertically */
+    flex-direction: column;
     text-align: center;
   }
 
   .hero-image {
-    width: 90%;
-    height: auto;
+    width: 80%;
     margin-top: 20px;
   }
 
   .hero-text {
     max-width: 700px;
-    text-align: center; /* Center align text for tablets */
+    text-align: center;
   }
 
   .hero-section h1 {
@@ -169,11 +211,10 @@
   }
 
   .dots {
-    bottom: 15px; /* Adjust position for tablets */
+    bottom: 15px;
   }
 }
 
-/* Media Query for Mobile Devices */
 @media (max-width: 768px) {
   .hero-text {
     padding: 0 15px;
@@ -205,5 +246,39 @@
   .dot {
     width: 10px;
     height: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text {
+    padding: 0 10px;
+  }
+
+  .hero-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-section p {
+    font-size: 0.9rem;
+  }
+
+  .hero-section button {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+  .hero-image {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .dots {
+    bottom: 8px;
+    gap: 6px;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
   }
 }
