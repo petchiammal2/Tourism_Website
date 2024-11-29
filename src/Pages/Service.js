@@ -1,17 +1,19 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import tour from './Assets/tour.webp';
-import hotel from './Assets/hotel.webp';
-import transport from './Assets/transport.webp';
-import transportation from './Assets/transportation.webp';
-import './Service.css';
+import './CSS/Service.css';
+import tour from '../Assets/tour.webp';
+import hotel from '../Assets/hotel.webp';
+import transport from '../Assets/transport.webp';
+import transportation from '../Assets/transportation.webp';
+import { handleWhatsAppMessage } from '../Components/WCintegration';
 
 const Service = () => {
   return (
     <div className="service-container">
-      <div className='cover-image'>
-      <img src={transportation} alt="hero image" />
+      <div className='hero-section'>
+      <img src={transportation} alt="hero image"  className='hero-image' />
       <h2 className="page-title">Our Services</h2>
+      <button className="hero-button" onClick={() => handleWhatsAppMessage("bookNow")}>Book Now</button>
       </div>
       <div className="service-list">
         <Link to="/StayPackage" className="service-item-link">
