@@ -1,27 +1,59 @@
-// DestinationGrid.js
 import React from "react";
-import DestinationCard from "../Components/Destinationcard";
 import "./CSS/DestinationGrid.css";
+
+import Thailand from "../Assets/Thailand.jpg";
+import Switzerland from "../Assets/Switzerland.jpg";
+import Australia from "../Assets/Austraila.jpg";
+import china from "../Assets/china.jpg";
+import France from "../Assets/France.jpg";
 
 const DestinationGrid = () => {
   const destinations = [
-    { id: 1, image: require( "../Assets/Thailand.jpg"), name: "Thailand" },
-    { id: 2, image: require("../Assets/china.jpg"), name: "China" },
-    { id: 3, image: require("../Assets/France.jpg"), name: "France" },
-    { id: 4, image: require("../Assets/Austraila.jpg"), name: "Austraila" },
-    { id: 5, image:require( "../Assets/Switzerland.jpg"), name: "Switzerland" },
-    { id: 6, image:require( "../Assets/norway.jpg"), name: "Norway" },
+    {
+      title: "Bali, Indonesia",
+      image: Thailand,
+      description: "Explore the serene beaches, temples, and vibrant culture of Bali.",
+    },
+    {
+      title: "Paris, France",
+      image: Switzerland,
+      description: "Discover the romantic city of Paris with its iconic Eiffel Tower and cafes.",
+    },
+    {
+      title: "Tokyo, Japan",
+      image: china,
+      description: "Experience the futuristic cityscapes and rich tradition of Tokyo.",
+    },
+    {
+      title: "Sydney, Australia",
+      image: Australia,
+      description: "Visit the famous Sydney Opera House and Bondi Beach.",
+    },
+    {
+      title: "New York City, USA",
+      image: France,
+      description: "Enjoy the bustling streets of Manhattan and iconic landmarks like Times Square.",
+    },
+    
   ];
 
   return (
-    <section className="destination-grid">
-      <h2>Explore Our Destinations</h2>
-      <div className="grid">
-        {destinations.map((dest) => (
-          <DestinationCard key={dest.id} destination={dest} />
-        ))}
-      </div>
-    </section>
+    <div className="tourism-grid">
+      {destinations.map((destination, index) => (
+        <div key={index} className="tourism-item">
+          <img
+            src={destination.image}
+            alt={destination.title}
+            className="tourism-image"
+            />
+          <h3 className="tourism-title">{destination.title}</h3>
+          <p className="tourism-description">{destination.description}</p>
+          <a href={destination.link} className="read-more">
+          Read more
+          </a>
+        </div>
+      ))}
+    </div>
   );
 };
 
