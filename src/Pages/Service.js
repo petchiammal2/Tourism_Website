@@ -3,7 +3,6 @@ import './CSS/Service.css';
 import tour from '../Assets/tour.webp';
 import hotel from '../Assets/hotel.webp';
 import transport from '../Assets/transport.webp';
-// import servicebg1 from '../Assets/servicebg1.webp';
 import servicebg2 from '../Assets/servicebg2.webp';
 import swim from '../Assets/swim.webp';
 import cultural from '../Assets/cultural.webp';
@@ -67,8 +66,6 @@ const ServicePage = () => {
           <p className="service-description">Personalized travel plans designed to meet your unique interests.</p>
         </div>
       </div>
-
-      {/* View All Button */}
       <button className="view-all-button">View All</button>
     </div>
   );
