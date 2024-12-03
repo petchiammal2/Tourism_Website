@@ -46,6 +46,7 @@ const DestinationGrid = () => {
 
       description:"Experience the pristine white sandy beaches, crystal-clear turquoise waters, and luxurious overwater maldives.",
 
+      description:"Experience the pristine white sandy beaches, crystal-clear turquoise waters, and luxurious overwater maldives.",
     },
     {
       title:"Japan",
