@@ -6,33 +6,53 @@ import Switzerland from "../Assets/Switzerland.jpg";
 import Australia from "../Assets/Austraila.jpg";
 import china from "../Assets/china.jpg";
 import France from "../Assets/France.jpg";
+import Maldives from "../Assets/Maldives.jpg";
+import japan from "../Assets/japan.jpg";
+import USA from "../Assets/USA.jpg";
 
 const DestinationGrid = () => {
   const destinations = [
     {
-      title: "Bali, Indonesia",
+      title: "Thailand",
       image: Thailand,
-      description: "Explore the serene beaches, temples, and vibrant culture of Bali.",
-    },
-    {
-      title: "Paris, France",
+      description: " Thailand, known as the Land of Smiles, is a tropical paradise filled with cultural rfdiches, vibrant nightlife, and natural wonders. From the bustling streets.",
+     },
+
+      {
+      title: "Switzerland",
       image: Switzerland,
-      description: "Discover the romantic city of Paris with its iconic Eiffel Tower and cafes.",
+      description: "Switzerland, a dreamlike destination in the heart of Europe, is famed for its snow-capped Alps, pristine lakes, and picturesque villages.",
     },
     {
-      title: "Tokyo, Japan",
+      title: "China",
       image: china,
-      description: "Experience the futuristic cityscapes and rich tradition of Tokyo.",
+      description: "China, one of the world's oldest civilizations, is a country of rich heritage, diverse culture, and breathtaking landscapes. ",
     },
     {
-      title: "Sydney, Australia",
+      title: "Australia",
       image: Australia,
-      description: "Visit the famous Sydney Opera House and Bondi Beach.",
+      description: "Australia, the land Down Under, is a paradise of unique landscapes, vibrant cities, and unparalleled wildlife. Known for traveller .",
+    },
+
+    {
+      title: "France ",
+      image: France,
+      description: "France, often called the  Hexagon is a country of timeless beauty, rich history, and unrivaled sophistication. It is a dream destination for travelers seeking culture, art, and culinary delight.",
     },
     {
-      title: "New York City, USA",
-      image: France,
-      description: "Enjoy the bustling streets of Manhattan and iconic landmarks like Times Square.",
+      title:"Maldives",
+      image: Maldives,
+      description:"Experience the pristine white sandy beaches, crystal-clear turquoise waters, and luxurious overwater maldives.",
+    },
+    {
+      title:"Japan",
+      image:japan,
+      description:" Japan, an island nation in East Asia, is renowned for its rich cultural heritage, blending ancient traditions with cutting-edge technology. ",
+    },
+    {
+      title:"USA",
+      image:USA,
+      description:"The United States, a vast and diverse nation in North America, is known for its cultural influence, technological innovation.",
     },
     
   ];
