@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './CSS/Section1.css';
-import image1 from '../Assets/fur1.webp';  // Adjust the path as needed
-import image2 from '../Assets/sec1.webp';
-import image3 from '../Assets/fur4.webp';
+import image1 from '../Assets/fur2.webp';  // Adjust the path as needed
+import image2 from '../Assets/fur4.jpg';
+import image3 from '../Assets/fur3.webp';
 
 function Section1() {
   const [activeIndex, setActiveIndex] = useState(0);

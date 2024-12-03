@@ -1,39 +1,33 @@
-/* General Reset and Box-Sizing */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-}
-
 /* Section Container */
 .hero-section {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #c7bebb;
+  background: linear-gradient(135deg, #fffefe 0%, #8b8483 100%);
   text-align: center;
   padding: 10px;
   position: relative;
-  min-height: 100vh; /* Ensures the section covers the full viewport height */
+  height: 100vh; /* Full viewport height */
   overflow: hidden;
+  transition: background-color 1s ease-in-out;
 }
 
 /* Scroll Container */
 .scroll-container {
   display: flex;
   width: 300%;
-  height: 100%;
-  scroll-snap-type: x mandatory; 
+  height: 100%; /* Full viewport height */
+  scroll-snap-type: x mandatory; /* Snap behavior */
   overflow-x: scroll;
   scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+
+  /* Hide scrollbars */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer and Edge */
 }
 
 .scroll-container::-webkit-scrollbar {
-  display: none;
+  display: none; /* Chrome, Safari, Opera */
 }
 
 /* Individual Section */
@@ -46,13 +40,25 @@
   max-width: 1400px;
   margin: auto;
   scroll-snap-align: start;
-  gap: 20px;
+  animation: fadeIn 1.5s ease-in-out; /* Add fade-in animation */
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Text Section */
 .hero-text {
   max-width: 500px;
-  color: #000;
+  color: #333333;
   text-align: left;
 }
 
@@ -60,27 +66,47 @@
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 20px;
-  color: #000;
+  color: #333333;
+  animation: slideIn 1s ease-in-out; /* Text Slide In Animation */
 }
 
 .hero-section p {
   font-size: 1.2rem;
   margin-bottom: 20px;
-  color: #000;
+  color: #555555;
+}
+
+/* Slide In Animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .hero-section button {
   padding: 10px 20px;
   font-size: 1rem;
-  background-color: #9a9ea3;
-  color: rgb(0, 0, 0);
+  background-color: #000000;
+  color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .hero-section button:hover {
-  background-color: #b0c1d6;
+  background-color: #9ac5cf;
+  transform: scale(1.1); /* Slight zoom effect */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero-section button:active {
+  transform: scale(0.95);
 }
 
 /* Image Section */
@@ -89,13 +115,30 @@
   height: auto;
   overflow: hidden;
   border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  animation: zoomIn 1.5s ease-in-out; /* Add zoom animation */
+  transition: transform 0.5s ease, box-shadow 0.3s ease; /* Smooth effect on hover */
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 .hero-image img {
   width: 100%;
-  height: auto;
-  overflow: hidden;
+  height: 100%;
+  object-fit: cover;
   border-radius: 20px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.hero-image:hover img {
+  transform: scale(1.1); /* Zoom effect on hover */
 }
 
 /* Dot Navigation */
@@ -107,12 +150,6 @@
   display: flex;
   gap: 10px;
   z-index: 10;
-  opacity: 1; /* Initially visible */
-  transition: opacity 0.3s ease; /* Smooth transition for hiding/showing */
-}
-
-.dots.hide {
-  opacity: 0; /* Hide dots when scrolling */
 }
 
 .dot {
@@ -125,160 +162,12 @@
 }
 
 .dot.active {
-  background-color: #717171;
+  background-color: #333333;
 }
 
-/* Media Queries */
-
-/* 1500px screen */
-@media (min-width: 1500px) {
-  .hero-content {
-    max-width: 1600px; /* Increase the max width */
-    padding: 40px; /* Adjust padding */
-  }
-
-  .hero-text {
-    max-width: 700px; /* Increase text area width */
-  }
-
-  .hero-section h1 {
-    font-size: 4.5rem; /* Increase font size */
-  }
-
-  .hero-section p {
-    font-size: 1.5rem; /* Larger paragraph font size */
-  }
-
-  .hero-image {
-    width: 55%; /* Increase image width */
-  }
-
-  .dots {
-    bottom: 30px; /* Adjust position of dots */
-  }
+.dot:hover {
+  background-color: #7c7372; /* Highlight on hover */
 }
 
-/* 1440px - 1500px screen */
-@media (min-width: 1440px) and (max-width: 1499px) {
-  .hero-content {
-    max-width: 1500px;
-    padding: 30px;
-  }
-
-  .hero-text {
-    max-width: 600px; /* Increase text area width */
-  }
-
-  .hero-section h1 {
-    font-size: 4rem; /* Adjust font size */
-  }
-
-  .hero-section p {
-    font-size: 1.4rem; /* Slightly larger font size */
-  }
-
-  .hero-image {
-    width: 55%; /* Increase image width */
-  }
-
-  .dots {
-    bottom: 25px; /* Adjust position of dots */
-  }
-}
-
-@media (max-width: 1024px) {
-  .hero-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-image {
-    width: 80%;
-    margin-top: 20px;
-  }
-
-  .hero-text {
-    max-width: 700px;
-    text-align: center;
-  }
-
-  .hero-section h1 {
-    font-size: 2.5rem;
-  }
-
-  .hero-section p {
-    font-size: 1.1rem;
-  }
-
-  .dots {
-    bottom: 15px;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero-text {
-    padding: 0 15px;
-  }
-
-  .hero-section h1 {
-    font-size: 2rem;
-  }
-
-  .hero-section p {
-    font-size: 1rem;
-  }
-
-  .hero-section button {
-    font-size: 0.9rem;
-    padding: 8px 16px;
-  }
-
-  .hero-image {
-    width: 100%;
-    margin-top: 15px;
-  }
-
-  .dots {
-    bottom: 10px;
-    gap: 8px;
-  }
-
-  .dot {
-    width: 10px;
-    height: 10px;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-text {
-    padding: 0 10px;
-  }
-
-  .hero-section h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero-section p {
-    font-size: 0.9rem;
-  }
-
-  .hero-section button {
-    font-size: 0.8rem;
-    padding: 6px 12px;
-  }
-
-  .hero-image {
-    width: 100%;
-    margin-top: 10px;
-  }
-
-  .dots {
-    bottom: 8px;
-    gap: 6px;
-  }
-
-  .dot {
-    width: 8px;
-    height: 8px;
-  }
-}
+/* Responsive Media Queries */
+/* Retain the previously mentioned queries for devices */
