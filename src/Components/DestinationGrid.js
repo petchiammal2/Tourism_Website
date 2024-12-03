@@ -6,9 +6,12 @@ import Switzerland from "../Assets/Switzerland.jpg";
 import Australia from "../Assets/Austraila.jpg";
 import china from "../Assets/china.jpg";
 import France from "../Assets/France.jpg";
-import Maldives from "../Assets/Maldives.jpg";
 import japan from "../Assets/japan.jpg";
 import USA from "../Assets/USA.jpg";
+import Italy from "../Assets/Italy.jpg";
+import Newyork from "../Assets/Newyork.jpg";
+import Maldives from "../Assets/Maldives.jpg";
+
 
 const DestinationGrid = () => {
   const destinations = [
@@ -42,24 +45,34 @@ const DestinationGrid = () => {
     {
       title:"Maldives",
       image: Maldives,
-      description:"Experience the pristine white sandy beaches, crystal-clear turquoise waters, and luxurious overwater villas of the Maldives.",
+      description:"Experience the pristine white sandy beaches, crystal-clear  and luxurious overwater villas of the Maldives.",
 
-      description:"Experience the pristine white sandy beaches, crystal-clear turquoise waters, and luxurious overwater maldives.",
-
-      description:"Experience the pristine white sandy beaches, crystal-clear turquoise waters, and luxurious overwater maldives.",
+      
     },
     {
       title:"Japan",
       image:japan,
-      description:" Japan, an island nation in East Asia, is renowned for its rich cultural heritage, blending ancient traditions with cutting-edge technology. ",
+      description:" Japan, an island nation in East Asia, is renowned for its rich cultural heritage, cutting-edge technology. ",
     },
+    
     {
       title:"USA",
       image:USA,
-      description:"The United States, a vast and diverse nation in North America, is known for its cultural influence, technological innovation.",
+      description:"The United States, a vast and diverse nation in North America, is known  technological innovation.",
+    },
+
+    {
+      title:"Italy",
+      image:Italy,
+      description:"Italy, located in southern Europe, is famous for its rich history, art, and culture,   Tower of Pisa.",
     },
     
-  ];
+    {
+      title: "Newyork",
+      image: Newyork ,
+      description:"New York City is one of the most iconic and vibrant cities in the world, known for its impressive skyline .",
+    },
+  ]
 
   return (
     <div className="tourism-grid">
