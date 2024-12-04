@@ -138,17 +138,128 @@
   .explore-butto:hover {
     background-color:#555;
   }
+  /* Responsive Media Queries */
+@media (max-width: 1200px) {
+  .tourism-container {
+    flex-direction: column;
+    align-items: center;
+  }
 
-  .footer-section {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    margin-top: 20px;
+  .services-grid {
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
   }
-  
-  .footer-section img {
-    width: 150px;
-    height: auto;
-    border-radius: 8px;
+
+  .tourism-image {
+    height: 400px;
   }
-  
+
+  .heading {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .description {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .tourism-container {
+    gap: 15px;
+  }
+
+  .heading {
+    font-size: 1.8rem;
+  }
+
+  .description {
+    font-size: 1.1rem;
+  }
+
+  .service-card {
+    padding: 10px;
+  }
+
+  .service-image {
+    width: 60px;
+    height: 60px;
+  }
+
+  .service-name {
+    font-size: 1rem;
+  }
+
+  .service-description {
+    font-size: 0.9rem;
+  }
+
+  .tourism-image {
+    height: 300px;
+  }
+
+  .top-section {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .text-section {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .image1 {
+    width: 100%;
+  }
+
+  .image2 {
+    width: 80%;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 1.5rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .service-image {
+    width: 50px;
+    height: 50px;
+  }
+
+  .service-name {
+    font-size: 0.9rem;
+  }
+
+  .service-description {
+    font-size: 0.8rem;
+  }
+
+  .tourism-image {
+    height: 200px;
+  }
+
+  .explore-button {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+
+  .text-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .text-section p {
+    font-size: 1rem;
+  }
+
+  .text-section ul {
+    font-size: 0.9rem;
+  }
+}

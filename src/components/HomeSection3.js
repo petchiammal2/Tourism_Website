@@ -1,15 +1,15 @@
 import React from "react";
-import "./HomePage.css"; // Combined CSS for both components
-import transportation from './Assets/transportation.webp';
-import hotel from './Assets/hotel.webp';
-import tour from './Assets/tour.webp';
-import transport from './Assets/transport.webp';
-import swim from './Assets/swim.webp';
-import img1 from './Assets/img1.webp';
-import img2 from './Assets/img2.webp';
-import img3 from './Assets/img3.webp';
-import img4 from './Assets/img4.webp';
-import img5 from './Assets/img5.webp';
+import "./CSS/HomeSection3.css"; // Combined CSS for both components
+import transportation from '../Assets/transportation.webp';
+import hotel from '../Assets/hotel.webp';
+import tour from '../Assets/tour.webp';
+import transport from '../Assets/transport.webp';
+import swim from '../Assets/swim.webp';
+import img1 from '../Assets/img1.webp';
+import img2 from '../Assets/img2.webp';
+import img3 from '../Assets/img3.webp';
+import img4 from '../Assets/img4.webp';
+import img5 from '../Assets/img5.webp';
 
 const HomePage = () => {
   const services = [
@@ -72,35 +72,25 @@ const HomePage = () => {
             <img src={img2} alt="Modern Bedroom Design" className="image2" />
           </div>
           <div className="text-section">
-            <h2>We Help You Make Modern Interior Design</h2>
+            <h2>We Help You Explore the World</h2>
             <p>
-              Interior design services transform spaces into functional and
-              aesthetically pleasing environments. Professionals assess needs,
-              curate design elements, and manage installations, ensuring harmony
-              and style.
+              Embark on unforgettable journeys with our expert travel services. 
+              Whether you're seeking serene landscapes, cultural landmarks, or thrilling adventures, 
+              we ensure your travel experience is seamless and memorable.
             </p>
             <ul>
               <li>
-                <strong>Furniture Selection:</strong> Chooses pieces that balance
-                style, comfort, and practicality.
+                <strong>Personalized Itineraries:</strong> Tailored travel plans to match your preferences.
               </li>
               <li>
-                <strong>Lighting Design:</strong> Integrates natural and
-                artificial lighting for ambiance and utility.
+                <strong>World-Class Hospitality:</strong> Experience comfort and luxury at every step.
               </li>
               <li>
-                <strong>Custom Designs:</strong> Tailors unique elements to
-                reflect personal style and needs.
+                <strong>Exclusive Deals:</strong> Enjoy great savings on premium packages.
               </li>
             </ul>
             <button className="explore-button">Explore</button>
           </div>
-        </div>
-        <div className="footer-section">
-          <img src={img2} alt="Cozy Living Room" />
-          <img src={img3} alt="Dining Room Design" />
-          <img src={img4} alt="Modern Mirror Setup" />
-          <img src={img5} alt="Comfortable Armchair" />
         </div>
       </div>
     </div>
