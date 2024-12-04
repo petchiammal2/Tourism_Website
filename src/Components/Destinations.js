@@ -9,7 +9,7 @@ const destinations = [
     { name: "Australia", img: "path/to/australia.jpg" },
     { name: "France", img: "path/to/france.jpg" },
     { name: "Norway", img: "path/to/norway.jpg" },
-];
+]
 
 const Destinations = () => {
     return (

@@ -5,31 +5,53 @@ body {
   background-color: #f5f5f5;
 }
 
+/* Animation Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hoverGlow {
+  0% {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  100% {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+}
+
 /* Container Styling */
 .explore-page {
   display: flex;
-  justify-content: center; /* Center the main content horizontally */
-  align-items: center; /* Center the content vertically */
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  min-height: 100vh; /* Use full viewport height */
+  min-height: 100vh;
   padding: 20px;
   box-sizing: border-box;
 }
 
 .main-content {
   width: 100%;
-  max-width: 1200px; /* Limit maximum width for better readability */
+  max-width: 1200px;
   padding: 20px;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  box-sizing: border-box; /* Include padding and border in width/height */
+  box-sizing: border-box;
+  animation: fadeIn 1s ease-out; /* Apply fade-in animation */
 }
 
 /* Header Styling */
 .header {
   display: flex;
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
@@ -39,13 +61,14 @@ body {
   font-size: 2rem;
   margin: 0;
   flex: 1;
+  animation: fadeIn 1.5s ease-out;
 }
 
 .nav-buttons {
   display: flex;
-  flex-wrap: wrap; /* Allow buttons to wrap for smaller screens */
+  flex-wrap: wrap;
   gap: 10px;
-  justify-content: center; /* Center buttons in smaller screens */
+  justify-content: center;
 }
 
 .nav-buttons button {
@@ -56,17 +79,18 @@ body {
   color: white;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .nav-buttons button:hover {
   background-color: #0056b3;
+  transform: scale(1.05);
 }
 
 /* Grid Styling */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Flexible grid */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
 }
 
@@ -78,11 +102,12 @@ body {
   text-align: center;
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 1s ease-out;
 }
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  animation: hoverGlow 0.5s alternate ease-in-out infinite;
 }
 
 .card img {
@@ -111,12 +136,12 @@ body {
 /* Responsive Design: For tablets (768px and below) */
 @media (max-width: 768px) {
   .header {
-    flex-direction: column; /* Stack header items vertically */
+    flex-direction: column;
     text-align: center;
   }
 
   .header h1 {
-    font-size: 1.8rem; /* Slightly smaller heading */
+    font-size: 1.8rem;
   }
 
   .nav-buttons {
@@ -124,45 +149,44 @@ body {
   }
 
   .grid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Smaller column size */
-    gap: 15px; /* Reduce gap between cards */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
   }
 
   .card img {
-    height: 180px; /* Reduce image height */
+    height: 180px;
   }
 
   .card p {
-    font-size: 0.9rem; /* Slightly smaller text */
+    font-size: 0.9rem;
   }
 }
 
 /* Responsive Design: For phones (480px and below) */
-@media (max-width: 768px) {
-
+@media (max-width: 480px) {
   .main-content {
     padding: 10px;
   }
 
   .header h1 {
-    font-size: 1.5rem; /* Further reduce heading size */
+    font-size: 1.5rem;
   }
 
   .nav-buttons button {
-    padding: 6px 12px; /* Reduce button padding */
-    font-size: 0.8rem; /* Smaller button text */
+    padding: 6px 12px;
+    font-size: 0.8rem;
   }
 
   .grid {
-    grid-template-columns: 1fr; /* Single column for small screens */
-    gap: 10px; /* Smaller gap */
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
 
   .card img {
-    height: 100px; /* Further reduce image height */
+    height: 100px;
   }
 
   .card p {
-    font-size: 0.8rem; /* Smaller text */
+    font-size: 0.8rem;
   }
 }
