@@ -1,14 +1,12 @@
 
 import React from "react";
-import Hero from "../Components/Hero";
-import DestinationGrid from "../Components/DestinationGrid";
-
-
+import BlogSection from "../Components/BlogSection";
+import DestinationGrid from "../Components/DestinationGrid"
 function Blog() {
   return (
     <div className="Blog">
       
-      <Hero />
+      <BlogSection/>
       <DestinationGrid />
 
     </div>
