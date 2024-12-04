@@ -1,82 +1,155 @@
-
-
-
-
+/* Home Section Container */
 .home-section {
-  border-color: #01070e;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 60px;
-  background-color: #c7bebb;
+  background: linear-gradient(135deg, #fffefe 0%, #8b8483 100%);
   text-align: center;
+  min-height: 100vh; /* Full height */
+  position: relative;
+  transition: background 1s ease-in-out;
 }
 
+/* Main Content */
 .home-content {
   display: flex;
-  flex-direction: row-reverse; /* Swaps the position of text and image container */
+  flex-direction: row-reverse; /* Text and image alignment */
   max-width: 1200px;
   align-items: center;
+  gap: 70px; /* Add space between text and images */
+  animation: slideIn 1s ease-in-out;
+  position: relative;
+  z-index: 2;
 }
 
+/* Image Container */
 .home-image-outer-container {
   display: flex;
-  gap: 50px;
-  width: 60%; /* Set image container width to 50% */
+  justify-content: space-between; /* Equal spacing between images */
+  align-items: center;
+  gap: 20px; /* Space between images */
+  width: 100%; 
+  height: 60vh; /* Adjust width for better balance */
+  position: relative;
 }
 
 .home-image img {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
+  width: 100%; /* Full width images */
+  height: 50vh;
+  border-radius: 15px;
+  object-fit: cover;
+  animation: zoom-in 1s ease-in-out;
+  transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth transition effects */
 }
 
+/* Hover Zoom Effect on Images */
+.home-image img:hover {
+  transform: scale(1.15); /* Stronger zoom effect */
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+}
+
+/* Text Section */
 .home-text {
   max-width: 500px;
-  margin-right: 40px; /* Moves text to the left */
-  width: 50%; /* Set text container width to 50% */
+  text-align: left; /* Align text to the left for better readability */
+  width: 40%; /* Adjust text width to balance with images */
+  animation: fade-in 1s ease-in-out;
+  z-index: 2;
 }
 
 .home-text h1 {
-  font-size: 2rem;
-  margin-block-end: 10px;
+  font-size: 3rem; /* Increase font size for header */
+  margin-bottom: 20px;
+  color: #01070e;
 }
 
 .home-text p {
-  font-size: 1.2rem;
+  font-size: 1.3rem; /* Larger text for better readability */
   margin-bottom: 20px;
+  color: #01070e;
 }
 
 .home-text button {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #9a9ea3;
-  color: rgb(0, 0, 0);
+  padding: 14px 28px;
+  font-size: 1.1rem;
+  background-color: #000000;
+  color: #f7f7f7;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  animation: pulse 2s infinite;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .home-text button:hover {
   background-color: #b0c1d6;
+  transform: scale(1.1);
 }
 
-
-/* Responsive adjustments */
+/* Responsive Design for Tablets */
 @media (max-width: 768px) {
   .home-content {
-      flex-direction: column;
-      text-align: center;
+    flex-direction: column;
+    align-items: center; /* Center alignment for better layout */
+    gap: 20px;
+  }
+
+  .home-image-outer-container {
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 15px;
+    justify-content: center; /* Center images on smaller screens */
+  }
+
+  .home-image img {
+    width: 80%; /* Slightly larger image size on tablets for better visibility */
+    height: auto; /* Maintain aspect ratio */
   }
 
   .home-text {
-      margin-right: 0;
-      margin-top: 20px;
+    width: 90%; /* Slightly wider for better readability */
+    text-align: center;
   }
 
-  .home-image-outer-container,
-  .home-text {
-      width: 100%; /* Set full width for small screens */
+  .home-text h1 {
+    font-size: 2.5rem; /* Reduce font size for tablets */
+  }
+
+  .home-text p {
+    font-size: 1.2rem; /* Adjust text size for readability */
   }
 }
 
+/* Responsive Design for Mobile */
+@media (max-width: 480px) {
+  .home-content {
+    flex-direction: column;
+    gap: 15px; /* Adjust gap for smaller screens */
+    align-items: center; /* Center content on mobile */
+  }
+
+  .home-image img {
+    width: 100%; /* Images take full width on mobile */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .home-image-outer-container {
+    flex-direction: column;
+    gap: 10px; /* Reduce spacing for smaller screens */
+    justify-content: center; /* Center images vertically */
+  }
+
+  .home-text {
+    width: 100%; /* Full width text for small screens */
+    text-align: center;
+  }
+
+  .home-text h1 {
+    font-size: 2rem; /* Further reduce font size for mobile */
+  }
+
+  .home-text p {
+    font-size: 1rem; /* Adjust text size */
+  }
+}
