@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import "./CSS/Header.css";
 
@@ -8,6 +8,21 @@ function Header() {
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
+
+    // Handle the cleanup of event listeners or any other side effects
+    useEffect(() => {
+        // Example: Adding global event listener or managing event listeners if needed
+        const handleResize = () => {
+            console.log("Window resized");
+        };
+
+        window.addEventListener("resize", handleResize);
+
+        // Cleanup function to remove event listener when component unmounts
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);  // Empty dependency array to run only on mount and unmount
 
     return (
         <header>
@@ -66,8 +81,6 @@ function Header() {
                             Gallery
                         </NavLink>
                     </li>
-                    
-                    
                     <li>
                         <NavLink
                             to="/contact"

@@ -2,7 +2,7 @@ import React from 'react';
 import './CSS/About.css'; // Import CSS for styling
 
 // Import images from the Assets folder
-import About6 from '../Assets/about0.webp';
+import About6 from '../Assets/about.avif';
 import About3 from '../Assets/about3.jpg';
 import About4 from '../Assets/about4.jpg';
 import About5 from '../Assets/about5.jpg';
@@ -28,7 +28,7 @@ const About = () => {
       <div className="overlay-description2">
         <h2>Discover the World Through Travel</h2>
         <p>
-          Welcome to our tourism website, your gateway to exploring breathtaking destinations around the globe. From serene beaches and lush mountains to historic landmarks and vibrant cities, our platform brings you closer to the wonders of the world. Let your wanderlust lead the way!
+        Welcome to our tourism website, your gateway to exploring breathtaking destinations around the globe. From serene beaches and lush mountains to historic landmarks and vibrant cities, our platform brings you closer to the wonders of the world. Let your wanderlust lead the way!
         </p>
       </div>
 
@@ -57,6 +57,14 @@ const About = () => {
         </div>
       </div>
 
+      {/* Company Description */}
+      <div className="company-description">
+        <h2>About Our Company</h2>
+        <p>
+          We are passionate about offering unforgettable travel experiences. Our team works tirelessly to bring you the best tours and packages, ensuring your journey is not just a vacation but an adventure of a lifetime. Whether you're looking to relax on a beach, explore a new city, or immerse yourself in nature, we've got you covered. Join us as we take you to some of the most amazing destinations around the world!
+        </p>
+      </div>
+
       {/* Team Section */}
       <div className="team-section">
         <h2 className="team-heading">Meet Our Team</h2>
@@ -69,28 +77,24 @@ const About = () => {
             <p>Phone: +123 456 7891</p>
           </div>
           <div className="team-member">
-            <img src={MAN3} alt="Housekeeping" className="team-image" />
+            <img src={MAN3} alt="Guide" className="team-image" />
             <h3>Emily Davis</h3>
             <p>Guide</p>
             <p>Email: emily.davis@example.com</p>
             <p>Phone: +123 456 7892</p>
           </div>
           <div className="team-member">
-            <img src={MAN1} alt="Housekeeping" className="team-image" />
-            <h3>Emily Davis</h3>
+            <img src={MAN1} alt="Guide" className="team-image" />
+            <h3>Michael Brown</h3>
             <p>Guide</p>
-            <p>Email: emily.davis@example.com</p>
-            <p>Phone: +123 456 7892</p>
+            <p>Email: michael.brown@example.com</p>
+            <p>Phone: +123 456 7893</p>
           </div>
         </div>
       </div>
 
       {/* Footer Section */}
-      <div className="subscript">
-        <hr />
-        <p>Copyright ©2023 Mr. Vinoth Kumar. All Rights Reserved.</p>
-        <p>Follow Me</p>
-      </div>
+      
     </div>
   );
 };
