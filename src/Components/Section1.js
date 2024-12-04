@@ -1,17 +1,18 @@
-
 import React, { useState, useRef, useEffect } from 'react';
 import './CSS/Section1.css';
-import image1 from '../Assets/pic2.jpg';  // Adjust the path as needed
-import image2 from '../Assets/sec1.webp';
-import image3 from '../Assets/sec2.webp';
+import image1 from '../Assets/fur2.webp';  // Adjust the path as needed
+import image2 from '../Assets/fur4.jpg';
+import image3 from '../Assets/fur3.webp';
 
 function Section1() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isScrolling, setIsScrolling] = useState(false); // Track if scrolling is in progress
   const scrollContainerRef = useRef(null);
   const images = [image1, image2, image3];
 
   // Handle scroll to update active index
   const handleScroll = () => {
+    if (isScrolling) return; // Prevent scroll handler during active scrolling
     const scrollLeft = scrollContainerRef.current.scrollLeft;
     const sectionWidth = scrollContainerRef.current.offsetWidth;
     const newIndex = Math.floor(scrollLeft / sectionWidth);
@@ -25,6 +26,7 @@ function Section1() {
       left: sectionWidth * index,
       behavior: 'smooth',
     });
+    setIsScrolling(true);
   };
 
   // Set up interval to automatically switch between images
@@ -45,12 +47,18 @@ function Section1() {
 
   useEffect(() => {
     // Add event listener for scroll
+    const handleTransitionEnd = () => {
+      setIsScrolling(false); // Set scrolling state back to false after the scroll is completed
+    };
+
     scrollContainerRef.current.addEventListener('scroll', handleScroll);
+    scrollContainerRef.current.addEventListener('transitionend', handleTransitionEnd);
 
     return () => {
       scrollContainerRef.current.removeEventListener('scroll', handleScroll);
+      scrollContainerRef.current.removeEventListener('transitionend', handleTransitionEnd);
     };
-  });
+  }, [isScrolling]);
 
   return (
     <section className="hero-section">
@@ -70,8 +78,8 @@ function Section1() {
         ))}
       </div>
 
-    
-      <div className="dots">
+      {/* Dot Navigation */}
+      <div className={`dots ${isScrolling ? 'hide' : ''}`}>
         {images.map((_, index) => (
           <span
             key={index}
@@ -82,7 +90,6 @@ function Section1() {
       </div>
     </section>
   );
-
 }
 
 export default Section1;

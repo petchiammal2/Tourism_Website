@@ -1,0 +1,97 @@
+/* Grid container */
+.tourism-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  animation: fadeIn 1s ease-in-out; /* Fade-in effect for the grid container */
+}
+
+/* Grid item styling */
+.tourism-item {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: slideUp 0.5s ease-in-out both; /* Slide-up animation */
+}
+
+.tourism-item:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+/* Image styling */
+.tourism-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 2px solid #ddd;
+  transition: transform 0.3s ease; /* Smooth image scaling */
+}
+
+.tourism-item:hover .tourism-image {
+  transform: scale(1.1); /* Zoom-in on hover */
+}
+
+/* Title styling */
+.tourism-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 15px 0 10px;
+  color: #333;
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.tourism-item:hover .tourism-title {
+  color: #007bff; /* Change title color on hover */
+}
+
+/* Description styling */
+.tourism-description {
+  font-size: 14px;
+  color: #666;
+  padding: 0 15px 15px;
+  animation: fadeIn 1s ease-in; /* Fade-in effect for text */
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #007bff; /* Button color */
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}

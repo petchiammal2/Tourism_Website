@@ -1,196 +1,287 @@
+/* General Style */
 .about-page {
-  font-family: Arial, sans-serif;
-  color: #000000;
+  font-family: "Poppins", Arial, sans-serif;
+  color: #333;
   padding: 0;
   margin: 0;
+  background-color: #f7f7f7;
 }
 
-.about-heading {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-top: 50px;
-}
-
-/* About Section */
-/* Container for the big image */
 .big-container {
   position: relative;
-  width: 100%; /* Full width of the viewport */
-  overflow: hidden; /* Prevent overflow */
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
-
-/* Styling for the big image */
 .big-image {
-  width: 100%; /* Full width of the viewport */
-  height: 80vh; /* Height relative to the viewport */
-  object-fit: cover; /* Ensures no distortion */
-  display: block;
-  image-rendering: auto; /* Ensures smooth rendering of images */
+  width: 100%;
+  height: 80vh; /* Adjust this to control the height */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  animation: zoomOut 3s ease-in-out infinite alternate;
 }
+ /* Zoom in and out animation */
 
-/* Overlay styling */
+
 .image-overlay {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: none;
-  color: white;
-  padding: 15px 30px;
-  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  padding: 20px 30px;
+  border-radius: 10px;
   text-align: center;
-  font-size: 2rem; /* Adjust font size for a prominent title */
-  font-weight: bold;
-}
-
-.image-overlay h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  background: none;
+  box-shadow: none;
+  animation: fadeInUp 1.2s ease-in-out;
 }
 
 .overlay-description2 {
-  font-size: 1.2rem;
-  line-height: 1.5;
   text-align: center;
-  margin-top: 10px;
+  padding: 20px;
+  animation: fadeInStaggered 1.5s ease-in-out;
 }
 
-/* Three Images Section */
+.overlay-description2 h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: #222;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.overlay-description2 p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
 .three-images {
   display: flex;
-  justify-content: space-between;
-  gap: 2%;
-  margin: 20px 0;
+  justify-content: space-between; /* Ensures even spacing between the images */
+  margin: 30px auto;
+  gap: 20px;
+   /* Adds spacing between images */
 }
 
 .image-text {
   text-align: center;
-  width: 30%;
+  width: 30%; /* Ensures all three images fit in one line */
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transform: scale(0.95);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.small-image {
+.image-text:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.image-text img {
   width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px;
+  border-radius: 10px;
+  animation: zoomInFade 1.2s ease-in-out;
 }
 
-.image-text p {
-  margin-top: 10px;
-  font-size: 1rem;
+.image-text h3 {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #444;
+  animation: fadeIn 1.3s ease-in-out;
 }
 
-/* Team Section */
+/* Ensure alignment across all screen sizes */
+@media (max-width: 768px) {
+  .three-images {
+    flex-direction: row; /* Keep all images in a row */
+    flex-wrap: nowrap; /* Prevent wrapping to a new line */
+    gap: 10px; /* Reduce gap for smaller screens */
+  }
+
+  .image-text {
+    width: 30%; /* Adjust size to ensure they fit on smaller screens */
+  }
+
+  .image-text img {
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
+@media (max-width: 480px) {
+  .three-images {
+    justify-content: space-between; /* Keep spacing between images */
+    gap: 5px; /* Further reduce spacing for very small screens */
+  }
+
+  .image-text {
+    width: 30%; /* Keep the width consistent */
+  }
+
+  .image-text img {
+    height: auto; /* Ensure images adjust dynamically */
+  }
+}
+
+/* Team Section Styles */
 .team-section {
-  margin-top: 40px;
+  margin-top: 50px;
+  padding: 30px 20px;
+  text-align: center;
+  background-color: #ffffff;
+  border-top: 5px solid #000000;
+  animation: fadeInUp 1.8s ease-in-out;
 }
 
 .team-heading {
-  text-align: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 20px;
+  font-weight: bold;
+  color: #111;
+  animation: fadeInStaggered 1.5s ease-in-out;
 }
 
 .team-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 25px;
 }
 
 .team-member {
   width: 250px;
   text-align: center;
-  margin: 15px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(30px); /* Initial position off-screen */
+  opacity: 0; /* Initially hidden */
+  animation: fadeInUp 1.2s ease-in-out forwards, slideIn 1s ease-in-out forwards;
 }
 
-.team-image {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
+.team-member img {
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  border: 5px solid #ddd;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.team-member h3 {
-  font-size: 1.5rem;
-  margin: 10px 0;
+.team-member img:hover {
+  transform: scale(1.2); /* Zoom effect */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Darker shadow */
 }
 
-/* Subscript */
-.subscript {
-  text-align: center;
+.team-member h4 {
+  font-size: 1.3rem;
+  margin-top: 10px;
+  color: #333;
+  font-weight: bold;
+}
+
+.team-member p {
   font-size: 0.9rem;
   color: #666;
 }
 
-/* Responsive Design */
-/* For Tablets and Small Desktops */
-@media (max-width: 768px) {
-  .three-images {
-    flex-direction: column; /* Stack images vertically on smaller screens */
-    align-items: center;
-  }
+.subscript {
+  text-align: center;
+  padding: 20px;
+  animation: fadeIn 1.5s ease-in-out;
+  background: #222;
+  color: #fff;
+  border-radius: 10px;
+  margin-top: 40px;
+}
 
-  .image-text {
-    width: 100%; /* Full width for smaller screens */
-    margin-bottom: 20px;
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-
-  .team-member {
-    width: 100%;
-  }
-
-  .team-image {
-    width: 150px;
-    height: 150px;
-  }
-
-  .team-member h3 {
-    font-size: 1.2rem;
-  }
-
-  .big-image {
-    height: 50vh; /* Adjust height for smaller screens */
+  to {
+    opacity: 1;
   }
 }
 
-/* For Mobile Phones */
-@media (max-width: 480px) {
-  .about-page {
-    padding: 10px;
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px); /* Moves up from below */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100px); /* Slide in from left */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); /* End at normal position */
+  }
+}
+
+@keyframes zoomInFade {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomOut {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .three-images {
+    flex-direction: column;
   }
 
-  .about-heading {
-    font-size: 2rem;
+  .image-text {
+    width: 100%;
   }
 
-  .big-image {
-    height: auto; /* Let image adjust naturally */
-  }
-
-  .image-overlay h2 {
-    font-size: 1.5rem;
-  }
-
-  .overlay-description2 {
-    font-size: 1rem;
-  }
-
-  .team-image {
+  .team-member img {
     width: 120px;
     height: 120px;
   }
+}
 
-  .team-member h3 {
+@media (max-width: 480px) {
+  .overlay-description2 h2 {
+    font-size: 1.8rem;
+  }
+
+  .overlay-description2 p {
     font-size: 1rem;
   }
 
-  .image-text p {
-    font-size: 0.9rem;
+  .team-member img {
+    width: 100px;
+    height: 100px;
   }
 
   .three-images {
-    gap: 10px; /* Smaller gap for mobile */
+    gap: 15px;
   }
 }

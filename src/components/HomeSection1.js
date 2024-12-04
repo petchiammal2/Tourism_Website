@@ -2,8 +2,8 @@ import React from 'react';
 import './CSS/HomeSection1.css';
 
 // Import the images from the Assets folder
-import Image1 from '../Assets/images-2.jpeg';
-import Image2 from '../Assets/images-3.jpeg';
+import Image1 from '../Assets/change2.avif';
+import Image2 from '../Assets/chang4.avif';
 
 function HomeSection1() {
     return (
@@ -19,8 +19,7 @@ function HomeSection1() {
                     </div>
                 </div>
                 <div className="home-text">
-                    <h1>See the World, Feel the Magic
-                    </h1>
+                    <h1>See the World, Feel the Magic</h1>
                     <p>Experience the beauty and diversity of amazing locations.</p>
                     <button>Start Your Journey</button>
                 </div>

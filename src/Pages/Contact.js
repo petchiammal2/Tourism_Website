@@ -1,10 +1,11 @@
 // ContactPage.js
 import React from 'react';
 import './CSS/Contact.css';
+import transportation from '../Assets/transportation.webp';
+// import '../Contact1.css';
 import phone from '../Assets/phone.webp';
 import email from '../Assets/email.webp';
 import location from '../Assets/location.webp';
-import transportation from '../Assets/transportation.webp';
 
 
 const ContactPage = () => {

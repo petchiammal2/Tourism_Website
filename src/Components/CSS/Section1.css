@@ -3,97 +3,153 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #c7bebb;
+  background: linear-gradient(135deg, #fffefe 0%, #8b8483 100%);
   text-align: center;
   padding: 10px;
   position: relative;
   height: 100vh; /* Full viewport height */
   overflow: hidden;
+  transition: background-color 1s ease-in-out;
 }
 
 /* Scroll Container */
 .scroll-container {
-  display: flex; /* Arrange items horizontally */
-  transition: transform 0.5s ease; /* Smooth transition between sections */
-  width: 300%; 
+  display: flex;
+  width: 300%;
   height: 100%; /* Full viewport height */
   scroll-snap-type: x mandatory; /* Snap behavior */
-  overflow-x: scroll; /* Enable horizontal scrolling */
+  overflow-x: scroll;
   scroll-behavior: smooth;
-  scrollbar-width: thin; /* Make the scrollbar thin */
-  scrollbar-color: #717171 #c7bebb; /* Custom scrollbar color */
+
+  /* Hide scrollbars */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer and Edge */
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }
 
 /* Individual Section */
 .hero-content {
-  flex: 0 0 100%; /* Each section takes up 100% of the viewport */
+  flex: 0 0 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
-  max-width: 1200px;
+  padding: 20px;
+  max-width: 1400px;
   margin: auto;
-  scroll-snap-align: start; /* Snap to start of each section */
+  scroll-snap-align: start;
+  animation: fadeIn 1.5s ease-in-out; /* Add fade-in animation */
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Text Section */
 .hero-text {
-  max-width: 900px;
-  color: #000000;
+  max-width: 500px;
+  color: #333333;
+  text-align: left;
 }
 
 .hero-section h1 {
-  font-size: 48px;
+  font-size: 3rem;
   font-weight: bold;
   margin-bottom: 20px;
-  color: #000000;
+  color: #333333;
+  animation: slideIn 1s ease-in-out; /* Text Slide In Animation */
 }
 
 .hero-section p {
-  font-size: 18px;
+  font-size: 1.2rem;
   margin-bottom: 20px;
-  color: #000000;
+  color: #555555;
+}
+
+/* Slide In Animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .hero-section button {
   padding: 10px 20px;
-  font-size: 16px;
-  background-color: #9a9ea3;
-  color: rgb(0, 0, 0);
+  font-size: 1rem;
+  background-color: #000000;
+  color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .hero-section button:hover {
-  background-color: #b0c1d6;
+  background-color: #9ac5cf;
+  transform: scale(1.1); /* Slight zoom effect */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero-section button:active {
+  transform: scale(0.95);
 }
 
 /* Image Section */
-/* Image Section */
 .hero-image {
-  width: 700px;
-  height: 400px;
-  overflow: hidden; /* Ensures the border-radius is applied properly */
-  border-radius: 20px; /* Add curved edges to the container */
+  width: 50%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  animation: zoomIn 1.5s ease-in-out; /* Add zoom animation */
+  transition: transform 0.5s ease, box-shadow 0.3s ease; /* Smooth effect on hover */
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 .hero-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 20px; /* Add curved edges to the image */
+  border-radius: 20px;
+  transition: transform 0.5s ease-in-out;
 }
 
+.hero-image:hover img {
+  transform: scale(1.1); /* Zoom effect on hover */
+}
 
 /* Dot Navigation */
 .dots {
   position: absolute;
-  bottom: 20px;
+  bottom: 15px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   gap: 10px;
+  z-index: 10;
 }
 
 .dot {
@@ -106,19 +162,12 @@
 }
 
 .dot.active {
-  background-color: #717171;
+  background-color: #333333;
 }
 
-/* Media Query for Mobile View */
-@media (max-width: 768px) {
-  .hero-content {
-    flex-direction: column; /* Stack text and image vertically */
-    text-align: center;
-  }
-
-  .hero-image {
-    width: 100%;
-    height: auto;
-    margin-top: 20px;
-  }
+.dot:hover {
+  background-color: #7c7372; /* Highlight on hover */
 }
+
+/* Responsive Media Queries */
+/* Retain the previously mentioned queries for devices */

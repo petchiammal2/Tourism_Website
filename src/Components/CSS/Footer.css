@@ -1,49 +1,20 @@
 /* Basic Footer Styles */
 .footer {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: flex-start;
-  padding: 20px 40px;
+  padding: 20px;
   background-color: #f9f9f9;
-  color: #333;
-  font-family: Arial, sans-serif;
+  border-top: 1px solid #ddd;
 }
 
 .footer-section {
   flex: 1;
-  margin: 0 15px;
+  margin: 10px;
+  min-width: 150px; /* Ensures sections stack if too narrow */
 }
 
-.logo-section h2 {
-  font-size: 24px;
-  color: #000;
-  margin-bottom: 10px;
-}
-
-.logo-section p {
-  font-size: 14px;
-  color: #666;
-}
-
-.social-icons {
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.social-icons a {
-  font-size: 20px;
-  color: #666;
-  text-decoration: none;
-}
-
-.social-icons a:hover {
-  color: #333;
-}
-
-.footer-section h3 {
-  font-size: 16px;
-  color: #000;
+.footer-section h3, .footer-section h4 {
   margin-bottom: 10px;
 }
 
@@ -53,93 +24,47 @@
 }
 
 .footer-section ul li {
-  margin-bottom: 8px;
+  margin: 5px 0;
 }
 
-.footer-section ul li a {
-  color: #666;
-  text-decoration: none;
-}
-
-.footer-section ul li a:hover {
-  color: #333;
-}
-
-.newsletter {
-  display: flex;
-  align-items: center;
-}
-
-.newsletter input[type="email"] {
-  padding: 8px;
+.footer-section input {
+  padding: 5px;
+  margin-right: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  flex: 1;
-  outline: none;
 }
 
-.newsletter button {
+.footer-section button {
   background-color: #007bff;
   color: white;
   border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  margin-left: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 6px 10px;
+  border-radius: 4px;
   cursor: pointer;
-  font-size: 18px;
 }
 
-.newsletter button:hover {
+.footer-section button:hover {
   background-color: #0056b3;
 }
 
-/* Responsive Design */
+/* Responsive Styles for Smaller Screens */
 @media (max-width: 768px) {
   .footer {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; /* Stack sections vertically */
+    align-items: left;
   }
 
   .footer-section {
-    margin-bottom: 20px;
-    text-align: center;
+    margin: 10px 0;
+    text-align: left;
   }
 
-  .newsletter {
-    flex-direction: column;
-  }
-
-  .newsletter input[type="email"] {
+  .footer-section input {
     width: 100%;
     margin-bottom: 10px;
   }
 
-  .newsletter button {
-    width: auto;
-    height: auto;
-    padding: 10px 20px;
-    border-radius: 4px;
-  }
-}
-
-@media (max-width: 480px) {
-  .logo-section h2 {
-    font-size: 20px;
-  }
-
-  .footer-section h3 {
-    font-size: 14px;
-  }
-
-  .footer-section ul li {
-    font-size: 12px;
-  }
-
-  .social-icons a {
-    font-size: 18px;
+  .footer-section button {
+    width: 100%;
   }
 }

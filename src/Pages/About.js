@@ -10,6 +10,7 @@ import About5 from '../Assets/about5.jpg';
 // Manager and Worker Images
 import MAN2 from '../Assets/man2.jpg';
 import MAN3 from '../Assets/man3.jpg';
+import MAN1 from '../Assets/man1.jpg';
 
 const About = () => {
   return (
@@ -24,10 +25,12 @@ const About = () => {
         </div>
       </div>
 
-      <p className="overlay-description2">
+      <div className="overlay-description2">
         <h2>Discover the World Through Travel</h2>
-        Welcome to our tourism website, your gateway to exploring breathtaking destinations around the globe. From serene beaches and lush mountains to historic landmarks and vibrant cities, our platform brings you closer to the wonders of the world. Let your wanderlust lead the way!
-      </p>
+        <p>
+          Welcome to our tourism website, your gateway to exploring breathtaking destinations around the globe. From serene beaches and lush mountains to historic landmarks and vibrant cities, our platform brings you closer to the wonders of the world. Let your wanderlust lead the way!
+        </p>
+      </div>
 
       {/* Three Images Section */}
       <div className="three-images">
@@ -67,6 +70,13 @@ const About = () => {
           </div>
           <div className="team-member">
             <img src={MAN3} alt="Housekeeping" className="team-image" />
+            <h3>Emily Davis</h3>
+            <p>Guide</p>
+            <p>Email: emily.davis@example.com</p>
+            <p>Phone: +123 456 7892</p>
+          </div>
+          <div className="team-member">
+            <img src={MAN1} alt="Housekeeping" className="team-image" />
             <h3>Emily Davis</h3>
             <p>Guide</p>
             <p>Email: emily.davis@example.com</p>

@@ -11,8 +11,10 @@ import Layout from "./Components/Layout";
 import Gallery from "./Pages/Gallery";
 import Header from './Components/Header';
 import Footer from "./Components/Footer";
+
 import WCintegration from "./Components/WCintegration";
 
+import Explore from "./Pages/Explore";
 
 function App() {
   return (
@@ -26,7 +28,12 @@ function App() {
         <Route path="blog" element={<Blog />} />
         <Route path="layout" element={<Layout />} />
         <Route path="gallery" element={<Gallery />} />
+
         <Route path="service" element={<Service/>} />
+
+        <Route path="Explore" element={<Explore />} />
+
+        <Route path="*" element={<h1>404 - Page Not Found</h1>} />
       </Routes>
       <Footer />
     </div>
