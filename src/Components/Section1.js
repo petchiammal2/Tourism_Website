@@ -21,12 +21,14 @@ function Section1() {
 
   // Scroll to a specific section when a dot is clicked
   const handleDotClick = (index) => {
-    const sectionWidth = scrollContainerRef.current.offsetWidth;
-    scrollContainerRef.current.scrollTo({
-      left: sectionWidth * index,
-      behavior: 'smooth',
-    });
-    setIsScrolling(true);
+    if (scrollContainerRef.current) {
+      const sectionWidth = scrollContainerRef.current.offsetWidth;
+      scrollContainerRef.current.scrollTo({
+        left: sectionWidth * index,
+        behavior: 'smooth',
+      });
+      setIsScrolling(true);
+    }
   };
 
   // Set up interval to automatically switch between images
@@ -34,10 +36,12 @@ function Section1() {
     const interval = setInterval(() => {
       setActiveIndex((prevIndex) => {
         const nextIndex = (prevIndex + 1) % images.length; // Loop back to first after last
-        scrollContainerRef.current.scrollTo({
-          left: nextIndex * scrollContainerRef.current.offsetWidth,
-          behavior: 'smooth',
-        });
+        if (scrollContainerRef.current) {
+          scrollContainerRef.current.scrollTo({
+            left: nextIndex * scrollContainerRef.current.offsetWidth,
+            behavior: 'smooth',
+          });
+        }
         return nextIndex;
       });
     }, 5000); // Change image every 5 seconds
@@ -46,18 +50,22 @@ function Section1() {
   }, [images.length]);
 
   useEffect(() => {
-    // Add event listener for scroll
     const handleTransitionEnd = () => {
       setIsScrolling(false); // Set scrolling state back to false after the scroll is completed
     };
 
-    scrollContainerRef.current.addEventListener('scroll', handleScroll);
-    scrollContainerRef.current.addEventListener('transitionend', handleTransitionEnd);
+    // Add event listeners only if the ref is valid
+    const container = scrollContainerRef.current;
+    if (container) {
+      container.addEventListener('scroll', handleScroll);
+      container.addEventListener('transitionend', handleTransitionEnd);
 
-    return () => {
-      scrollContainerRef.current.removeEventListener('scroll', handleScroll);
-      scrollContainerRef.current.removeEventListener('transitionend', handleTransitionEnd);
-    };
+      // Cleanup event listeners on component unmount
+      return () => {
+        container.removeEventListener('scroll', handleScroll);
+        container.removeEventListener('transitionend', handleTransitionEnd);
+      };
+    }
   }, [isScrolling]);
 
   return (
