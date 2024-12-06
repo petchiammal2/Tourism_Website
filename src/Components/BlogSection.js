@@ -10,7 +10,7 @@ const BlogSection = ({ backgroundImage }) => {
 
       <div className="overlay">
         <div className="blog-content">
-          <h1 className="blog-title">Welcome to our Blog</h1>
+          <h4 className="blog-title">Welcome to our Blog</h4>
           <p className="blog-breadcrumb">
             <a href="/">Home</a> &gt; <span>Blog</span>
           </p>
