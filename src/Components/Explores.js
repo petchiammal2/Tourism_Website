@@ -6,6 +6,10 @@ import BeachImage from "../Assets/beach.jpg";
 import IslandImage from "../Assets/island.jpg";
 import SunsetImage from "../Assets/sunset.jpg";
 import HeroImage from "../Assets/hero.jpg"; // Background image for Hero Section
+import CountrysideImage from "../Assets/countryside.jpg";
+import cliffImage from "../Assets/cliff.jpg";
+
+
 
 const Explore = () => {
   return (
@@ -28,16 +32,15 @@ const Explore = () => {
         }}
       >
         <div className="explore-content">
+          
           <h1 className="explore-title">Explore</h1>
           <p className="explore-subtitle">
             Discover breathtaking destinations and plan your perfect trip.
           </p>
-          <div className="search-bar">
-            <input type="text" placeholder="Enter destination..." />
-            <button>Search</button>
-          </div>
+          
         </div>
       </header>
+      
 
       {/* Explore Grid */}
       <section className="explore-grid">
@@ -56,6 +59,14 @@ const Explore = () => {
         <div className="grid-item">
           <img src={SunsetImage} alt="sunset" className="grid-image" />
           <h3 className="grid-title">Sunset</h3>
+        </div>
+        <div className="grid-item">
+          <img src={CountrysideImage} alt="countryside" className="grid-image" />
+          <h3 className="grid-title">countryside</h3>
+        </div>
+        <div className="grid-item">
+          <img src={cliffImage} alt="cliff" className="grid-image" />
+          <h3 className="grid-title">cliff</h3>
         </div>
       </section>
     </div>
