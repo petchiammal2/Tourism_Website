@@ -1,10 +1,11 @@
+
 /* General Style */
 .about-page {
   font-family: "Poppins", Arial, sans-serif;
   color: #333;
   padding: 0;
   margin: 0;
-  background-color: #f7f7f7;
+  background-color: #fffeff;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -193,10 +194,19 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   opacity: 1;
   transition: box-shadow 0.4s ease-in-out;
+  perspective: 1000px;
+  transform-style: preserve-3d;
 }
 
 .team-member:hover {
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  transform: rotateY(20deg); /* 3D Rotate effect */
+}
+
+/* Text Flip Animation */
+.team-member:hover h3,
+.team-member:hover p {
+  animation: flipText 1.2s ease-in-out;
 }
 
 .team-member h3 {
@@ -211,6 +221,21 @@
   color: #666;
 }
 
+/* Flip Text Animation */
+@keyframes flipText {
+  0% {
+    transform: rotateY(180deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+    transform: rotateY(90deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+}
 
 /* Keyframe Animations */
 @keyframes fadeIn {

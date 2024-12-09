@@ -25,10 +25,11 @@ const About = () => {
         </div>
       </div>
 
+      {/* Overlay Description Section */}
       <div className="overlay-description2">
         <h2>Discover the World Through Travel</h2>
         <p>
-        Welcome to our tourism website, your gateway to exploring breathtaking destinations around the globe. From serene beaches and lush mountains to historic landmarks and vibrant cities, our platform brings you closer to the wonders of the world. Let your wanderlust lead the way!
+          Welcome to our tourism website, your gateway to exploring breathtaking destinations around the globe. From serene beaches and lush mountains to historic landmarks and vibrant cities, our platform brings you closer to the wonders of the world. Let your wanderlust lead the way!
         </p>
       </div>
 
@@ -57,7 +58,7 @@ const About = () => {
         </div>
       </div>
 
-      {/* Company Description */}
+      {/* Company Description Section */}
       <div className="company-description">
         <h2>About Our Company</h2>
         <p>
@@ -69,32 +70,58 @@ const About = () => {
       <div className="team-section">
         <h2 className="team-heading">Meet Our Team</h2>
         <div className="team-container">
+          {/* Team Member 1 */}
           <div className="team-member">
-            <img src={MAN2} alt="Receptionist" className="team-image" />
-            <h3>Jane Smith</h3>
-            <p>Manager</p>
-            <p>Email: jane.smith@example.com</p>
-            <p>Phone: +123 456 7891</p>
+            <div className="team-member-inner">
+              {/* Image Layer (Front) */}
+              <div className="team-image">
+                <img src={MAN2} alt="Manager" />
+              </div>
+              {/* Text Layer (Back) */}
+              <div className="team-text">
+                <h3>Jane Smith</h3>
+                <p>Manager</p>
+                <p>Email: jane.smith@example.com</p>
+                <p>Phone: +123 456 7891</p>
+              </div>
+            </div>
           </div>
+
+          {/* Team Member 2 */}
           <div className="team-member">
-            <img src={MAN3} alt="Guide" className="team-image" />
-            <h3>Emily Davis</h3>
-            <p>Guide</p>
-            <p>Email: emily.davis@example.com</p>
-            <p>Phone: +123 456 7892</p>
+            <div className="team-member-inner">
+              {/* Image Layer (Front) */}
+              <div className="team-image">
+                <img src={MAN3} alt="Guide" />
+              </div>
+              {/* Text Layer (Back) */}
+              <div className="team-text">
+                <h3>Emily Davis</h3>
+                <p>Guide</p>
+                <p>Email: emily.davis@example.com</p>
+                <p>Phone: +123 456 7892</p>
+              </div>
+            </div>
           </div>
+
+          {/* Team Member 3 */}
           <div className="team-member">
-            <img src={MAN1} alt="Guide" className="team-image" />
-            <h3>Michael Brown</h3>
-            <p>Guide</p>
-            <p>Email: michael.brown@example.com</p>
-            <p>Phone: +123 456 7893</p>
+            <div className="team-member-inner">
+              {/* Image Layer (Front) */}
+              <div className="team-image">
+                <img src={MAN1} alt="Guide" />
+              </div>
+              {/* Text Layer (Back) */}
+              <div className="team-text">
+                <h3>Michael Brown</h3>
+                <p>Guide</p>
+                <p>Email: michael.brown@example.com</p>
+                <p>Phone: +123 456 7893</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
-      {/* Footer Section */}
-      
     </div>
   );
 };

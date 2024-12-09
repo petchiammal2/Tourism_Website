@@ -78,6 +78,7 @@ function Section1() {
               <h1>Explore the World with Us</h1>
               <p>Discover amazing places and unique experiences.</p>
               <button>Start Your Journey</button>
+              
             </div>
             <div className="hero-image">
               <img src={image} alt={`Explore the world ${index + 1}`} />
@@ -93,7 +94,9 @@ function Section1() {
             key={index}
             className={`dot ${activeIndex === index ? 'active' : ''}`}
             onClick={() => handleDotClick(index)}
-          ></span>
+          >
+         
+          </span>
         ))}
       </div>
     </section>
