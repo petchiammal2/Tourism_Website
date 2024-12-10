@@ -1,43 +1,15 @@
-
-/* Hero Section */
-.explore-section {
-  text-align: center;
-  padding: 100px 20px; /* Increased padding for more height */
-  background-color: #007bff;
-  color:black;
-  margin-bottom: 40px;
-  height: 400px; /* Fixed height */
-  width: 100%; /* Full width */
-}
-
-.explore-title {
-  font-size: 3rem; /* Increased title size */
-  margin-bottom: 20px;
-  color: black; /* Increased space below title */
-}
-
-.explore-subtitle {
-  font-size: 1.5rem; /* Increased subtitle font size */
-  margin-bottom: 30px;
-  color:black; /* Increased space below subtitle */
-}
-
-.search-bar input {
-  padding: 12px; /* Increased padding for the input */
-  width: 350px; /* Increased width of the input */
-}
-
-.search-bar button {
-  padding: 12px 25px; /* Increased button padding */
-  font-size: 1rem; /* Adjusted button text size */
-}
 /* Grid Section */
 .explore-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px; /* Add spacing between the grid items */
+  grid-template-columns: repeat(3, 1fr); /* Always three columns */
+  gap: 20px; /* Space between the items */
   padding: 20px;
+  justify-content: center; /* Center-align the grid */
+  align-items: center; 
+  padding: 5%;/* Align items vertically in the grid */
 }
+
+/* Grid item styling */
 .grid-item {
   background-color: white;
   border-radius: 10px;
@@ -45,15 +17,19 @@
   overflow: hidden;
   transition: transform 0.2s;
 }
+
 .grid-item:hover {
   transform: scale(1.05);
 }
 
+/* Grid item image styling */
 .grid-image {
   width: 100%;
   height: 200px;
   object-fit: cover;
 }
+
+/* Grid item title styling */
 .grid-title {
   text-align: center;
   font-size: 1.2rem;
@@ -61,6 +37,36 @@
   padding: 10px;
 }
 
+
+
+/* Hero Section */
+.explore-section {
+  text-align: center;
+  padding: 100px 20px; /* Increased padding for more height */
+  background-size: cover; /* Ensure the image covers the section */
+  color: grey;
+  margin-bottom: 40px;
+  height: 400px; /* Fixed height */
+  width: 100%; /* Full width */
+  animation: heroZoomIn 3s ease-in-out forwards;
+   /* Run once and stay at the final state */
+}
+.explore-title {
+  font-size: 3rem; /* Increased title size */
+  margin-bottom: 30px;
+  color: black; /* Increased space below title */
+}
+
+
+.explore-subtitle {
+  font-size: 1.5rem; /* Increased subtitle font size */
+
+  color:black;
+  text-align: center;
+ /* Increased space below subtitle */
+}
+
+ 
 /* Animation Keyframes for Zoom-In */
 @keyframes heroZoomIn {
   0% {
@@ -69,18 +75,4 @@
   100% {
     transform: scale(1.2); /* Zoom in */
   }
-}
-
-/* Hero Section */
-.explore-section {
-  text-align: center;
-  padding: 100px 20px; /* Increased padding for more height */
-
-  background-size: cover; /* Make sure the image covers the section */
-  color:grey;
-  margin-bottom: 40px;
-  height: 400px; /* Fixed height */
-  width: 100%; /* Full width */
-  animation: zoomIn 3s ease-in-out forwards; /* Run once and stay at the final state */
-
 }

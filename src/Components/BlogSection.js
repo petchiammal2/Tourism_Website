@@ -17,8 +17,10 @@ const BlogSection = ({ backgroundImage }) => {
         </div>
       </div>
     </div>
-    
+
+  
   );
 };
+
 
 export default BlogSection;
