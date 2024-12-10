@@ -1,0 +1,69 @@
+.Explore-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full-screen height */
+    overflow: hidden;
+  }
+  
+  .Explore-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container */
+    filter: brightness(70%); /* Darkens the image for better text visibility */
+    animation: zoomIn 3s ease-in-out forwards; /* Add the zoom-in animation */
+  }
+  
+  @keyframes zoomIn {
+    0% {
+      transform: scale(1); /* Start with the original size */
+    }
+    
+    100% {
+      transform: scale(1.1); /* Return to original size */
+    }
+  }
+  
+  .Explore-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff; /* White text for contrast */
+  }
+  
+  .Explore-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: fadeIn 2s ease-in-out; /* Optional: Fade-in effect for text */
+  }
+  
+  .Explore-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .Explore-button {
+    background-color: #ff7f50; /* Coral color */
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .Explore-button:hover {
+    background-color: #e67343;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
