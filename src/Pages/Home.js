@@ -1,28 +1,21 @@
-
+import React from "react";
+import { Link } from "react-router-dom";  // Import Link from react-router-dom
 import Section1 from "../Components/Section1";
 import HomeSection1 from "../Components/HomeSection1";
-
 import HomeSection3 from "../Components/HomeSection3";
 
-
-
-
-
-
-
 const Home = () => {
-    return (
-   <>
+  return (
+    <>
+      <Section1 />
+      
+      <HomeSection1 />
+      
+      
 
-      <Section1/>
-      <HomeSection1/>
+      <HomeSection3 />
+    </>
+  );
+};
 
-      <HomeSection3/>
-   
-    
-   </>
-     
-    )
-  };
-  
-  export default Home;
+export default Home;

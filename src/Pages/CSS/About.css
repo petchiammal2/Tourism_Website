@@ -1,8 +1,7 @@
-
 /* General Style */
 .about-page {
   font-family: "Poppins", Arial, sans-serif;
-  color: #333;
+  color: #646161;
   padding: 0;
   margin: 0;
   background-color: #fffeff;
@@ -284,6 +283,11 @@
 @media (max-width: 768px) {
   .about-page {
     align-items: center;
+    padding: 10px;
+  }
+
+  .big-image {
+    height: 60vh;
   }
 
   .three-images {
@@ -364,5 +368,21 @@
   .company-description p {
     font-size: 0.9rem;
     padding: 0 10px;
+  }
+}
+
+@media (max-width: 375px) {
+  .big-image {
+    height: 50vh;
+  }
+
+  .image-text {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .team-member img {
+    width: 100px;
+    height: 100px;
   }
 }

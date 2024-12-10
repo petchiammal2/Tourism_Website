@@ -116,7 +116,7 @@ const About = () => {
                 <h3>Michael Brown</h3>
                 <p>Guide</p>
                 <p>Email: michael.brown@example.com</p>
-                <p>Phone: +123 456 7893</p>
+                <p>Phone: +123 456 7895</p>
               </div>
             </div>
           </div>
