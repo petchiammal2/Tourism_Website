@@ -1,4 +1,4 @@
-/* Section Container */
+/* General Section Styles */
 .hero-section {
   display: flex;
   align-items: center;
@@ -7,91 +7,66 @@
   text-align: center;
   padding: 10px;
   position: relative;
-  height: 100vh; /* Full viewport height */
+  min-height: 100vh;
   overflow: hidden;
-  transition: background-color 1s ease-in-out;
+  flex-direction: row;
+  box-sizing: border-box;
 }
 
 /* Scroll Container */
 .scroll-container {
   display: flex;
   width: 300%;
-  height: 100%; /* Full viewport height */
-  scroll-snap-type: x mandatory; /* Snap behavior */
+  height: 100%;
+  scroll-snap-type: x mandatory;
   overflow-x: scroll;
   scroll-behavior: smooth;
-
-  /* Hide scrollbars */
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* Internet Explorer and Edge */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .scroll-container::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+  display: none;
 }
 
-/* Individual Section */
+/* Hero Content */
 .hero-content {
   flex: 0 0 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 20px;
-  max-width: 1400px;
   margin: auto;
   scroll-snap-align: start;
-  animation: fadeIn 1.5s ease-in-out; /* Add fade-in animation */
+  box-sizing: border-box;
+  min-height: 100vh;
 }
 
-/* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Text Section */
+/* Hero Text */
 .hero-text {
   max-width: 500px;
-  color: #333333;
   text-align: left;
+  margin: 0 20px;
+  color: #333;
 }
 
 .hero-section h1 {
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 20px;
-  color: #333333;
-  animation: slideIn 1s ease-in-out; /* Text Slide In Animation */
+  color: #333;
 }
 
 .hero-section p {
   font-size: 1.2rem;
   margin-bottom: 20px;
-  color: #555555;
-}
-
-/* Slide In Animation */
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  color: #555;
 }
 
 .hero-section button {
   padding: 10px 20px;
   font-size: 1rem;
-  background-color: #000000;
+  background-color: #000;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -101,7 +76,7 @@
 
 .hero-section button:hover {
   background-color: #9ac5cf;
-  transform: scale(1.1); /* Slight zoom effect */
+  transform: scale(1.1);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -109,36 +84,20 @@
   transform: scale(0.95);
 }
 
-/* Image Section */
+/* Hero Image */
 .hero-image {
   width: 50%;
-  height: auto;
+  height: 100%;
   overflow: hidden;
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  animation: zoomIn 1.5s ease-in-out; /* Add zoom animation */
-  transition: transform 0.5s ease, box-shadow 0.3s ease; /* Smooth effect on hover */
-}
-
-@keyframes zoomIn {
-  from {
-    transform: scale(0.9);
-  }
-  to {
-    transform: scale(1);
-  }
 }
 
 .hero-image img {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
   border-radius: 20px;
-  transition: transform 0.5s ease-in-out;
-}
-
-.hero-image:hover img {
-  transform: scale(1.1); /* Zoom effect on hover */
 }
 
 /* Dot Navigation */
@@ -149,7 +108,6 @@
   transform: translateX(-50%);
   display: flex;
   gap: 10px;
-  z-index: 10;
 }
 
 .dot {
@@ -162,25 +120,23 @@
 }
 
 .dot.active {
-  background-color: #333333;
+  background-color: #333;
 }
 
-.dot:hover {
-  background-color: #7c7372; /* Highlight on hover */
-}
+/* Responsive Styles */
 
-/* Responsive Design */
-
-/* Tablets and Larger Screens (1024px and above) */
+/* Tablets and Larger Screens (1024px and below) */
 @media (max-width: 1024px) {
   .hero-section {
     flex-direction: column;
-    height: auto;
+    text-align: center;
   }
 
   .hero-content {
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    padding: 20px;
   }
 
   .hero-image {
@@ -190,7 +146,7 @@
 
   .hero-text {
     text-align: center;
-    max-width: 100%;
+    margin: 10px auto;
   }
 
   .hero-section h1 {
@@ -200,32 +156,30 @@
   .hero-section p {
     font-size: 1rem;
   }
-
-  .hero-section button {
-    padding: 12px 24px;
-  }
 }
 
-/* Mobile Landscape (768px) */
+/* Mobile Landscape (768px and below) */
 @media (max-width: 768px) {
   .hero-section {
     flex-direction: column;
-    height: auto;
   }
 
   .hero-content {
     flex-direction: column;
     align-items: center;
+    padding: 15px;
   }
 
   .hero-image {
     width: 100%;
+    height: auto;
     margin-top: 20px;
   }
 
   .hero-text {
     text-align: center;
-    max-width: 100%;
+    margin: 10px auto;
+    max-width: 90%;
   }
 
   .hero-section h1 {
@@ -233,23 +187,29 @@
   }
 
   .hero-section p {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .hero-section button {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    padding: 10px 20px;
   }
 }
 
 /* Mobile Portrait (480px and below) */
 @media (max-width: 480px) {
   .hero-section {
-    height: auto;
-    padding: 20px;
+    padding: 10px;
   }
 
   .hero-content {
+    flex-direction: column;
     padding: 15px;
+  }
+
+  .hero-text {
+    margin: 10px auto;
+    max-width: 100%;
   }
 
   .hero-section h1 {
@@ -257,49 +217,12 @@
   }
 
   .hero-section p {
-    font-size: 0.9rem;
-  }
-
-  .hero-section button {
-    padding: 8px 16px;
-    font-size: 1rem;
-  }
-
-  /* Corrected image container behavior for mobile */
-  .hero-image {
-    width: 100%; /* Full width for smaller screens */
-    height: auto; /* Maintain aspect ratio */
-    margin-top: 15px;
-  }
-
-  .hero-image img {
-    object-fit: cover; /* Maintain the cover effect */
-    width: 100%;
-    height: auto; /* Ensure height scales properly */
-  }
-
-  .hero-text {
-    max-width: 100%;
-  }
-}
-
-/* Small Mobile Devices (320px and below) */
-@media (max-width: 320px) {
-  .hero-section {
-    padding: 10px;
-  }
-
-  .hero-section h1 {
-    font-size: 1.5rem;
-  }
-
-  .hero-section p {
     font-size: 0.85rem;
   }
 
   .hero-section button {
-    padding: 6px 12px;
     font-size: 0.9rem;
+    padding: 8px 16px;
   }
 
   .hero-image {
@@ -307,8 +230,74 @@
     height: auto;
     margin-top: 15px;
   }
+}
+
+/* Large Screens (1025px to 1800px) */
+@media (min-width: 1025px) and (max-width: 1800px) {
+  .hero-section {
+    flex-direction: row;
+    padding: 40px;
+  }
+
+  .hero-content {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 40px;
+  }
+
+  .hero-image {
+    width: 50%;
+  }
 
   .hero-text {
-    max-width: 100%;
+    text-align: left;
+  }
+
+  .hero-section h1 {
+    font-size: 3rem;
+  }
+
+  .hero-section p {
+    font-size: 1.2rem;
+  }
+
+  .hero-section button {
+    font-size: 1rem;
+    padding: 12px 24px;
+  }
+}
+
+/* Extra Large Screens (1801px and above) */
+@media (min-width: 1801px) {
+  .hero-section {
+    flex-direction: row;
+    padding: 60px;
+  }
+
+  .hero-content {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 60px;
+  }
+
+  .hero-image {
+    width: 45%;
+  }
+
+  .hero-text {
+    text-align: left;
+  }
+
+  .hero-section h1 {
+    font-size: 4rem;
+  }
+
+  .hero-section p {
+    font-size: 1.5rem;
+  }
+
+  .hero-section button {
+    font-size: 1.5rem;
+    padding: 16px 32px;
   }
 }
