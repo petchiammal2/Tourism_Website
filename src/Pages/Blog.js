@@ -1,13 +1,13 @@
 
 import React from "react";
 import BlogSection from "../Components/BlogSection";
-import DestinationGrid from "../Components/DestinationGrid"
+import Postcard from "../Components/Postcard";
 function Blog() {
   return (
     <div className="Blog">
       
       <BlogSection/>
-      <DestinationGrid />
+      <Postcard />
 
     </div>
   );
