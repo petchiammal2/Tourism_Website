@@ -10,11 +10,11 @@ import cicon from '../Assets/cicon.webp'
 
       if (actionType === "default") {
       // Default message for WhatsApp icon
-      const message = "Hello! I have a general inquiry.";
+      const message = "Hi! Welcome to Tourism service.How can we assist you today?";
       window.open(`${baseWhatsappUrl}&text=${encodeURIComponent(message)}`, "_blank");
       } else if (actionType === "bookNow") {
       // Message for "Book Now" action
-      const message = "Hello! I would like to book a service.";
+      const message = "Hello! Thanks for choosing Tourism Service.Please confirm the details to proceed with your booking.";
       window.open(`${baseWhatsappUrl}&text=${encodeURIComponent(message)}`, "_blank");
       } else {
       console.error("Invalid action type passed to handleWhatsappMessage");
