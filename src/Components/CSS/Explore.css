@@ -1,3 +1,5 @@
+
+
 /* Grid Section */
 .explore-grid {
   display: grid;
@@ -8,8 +10,8 @@
   align-items: center; 
   padding: 5%;/* Align items vertically in the grid */
 }
-
 /* Grid item styling */
+
 .grid-item {
   background-color: white;
   border-radius: 10px;
@@ -37,42 +39,28 @@
   padding: 10px;
 }
 
+/* Media Queries for Responsive Design */
 
-
-/* Hero Section */
-.explore-section {
-  text-align: center;
-  padding: 100px 20px; /* Increased padding for more height */
-  background-size: cover; /* Ensure the image covers the section */
-  color: grey;
-  margin-bottom: 40px;
-  height: 400px; /* Fixed height */
-  width: 100%; /* Full width */
-  animation: heroZoomIn 3s ease-in-out forwards;
-   /* Run once and stay at the final state */
-}
-.explore-title {
-  font-size: 3rem; /* Increased title size */
-  margin-bottom: 30px;
-  color: black; /* Increased space below title */
+/* For smaller screens (tablets, small laptops) */
+@media (max-width: 768px) {
+  .explore-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust grid column size */
+  }
 }
 
-
-.explore-subtitle {
-  font-size: 1.5rem; /* Increased subtitle font size */
-
-  color:black;
-  text-align: center;
- /* Increased space below subtitle */
+/* For very small screens (phones) */
+@media (max-width: 480px) {
+  .explore-grid {
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 15px; /* Slightly smaller gap */
+  }
+  
+  .grid-title {
+    font-size: 1rem; /* Adjust font size */
+  }
 }
+
+
+
 
  
-/* Animation Keyframes for Zoom-In */
-@keyframes heroZoomIn {
-  0% {
-    transform: scale(1); /* Initial size */
-  }
-  100% {
-    transform: scale(1.2); /* Zoom in */
-  }
-}
