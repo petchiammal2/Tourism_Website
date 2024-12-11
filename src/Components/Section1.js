@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Link } from 'react-router-dom';  // Import Link for navigation
+import { Link } from 'react-router-dom';
 import './CSS/Section1.css';
-import image1 from '../Assets/fur2.webp';  // Adjust the path as needed
+import image1 from '../Assets/fur2.webp';  
 import image2 from '../Assets/fur4.jpg';
 import image3 from '../Assets/fur3.webp';
 
@@ -78,13 +78,12 @@ function Section1() {
             <div className="hero-text">
               <h1>Explore the World with Us</h1>
               <p>Discover amazing places and unique experiences.</p>
-              
               {/* Link to /book page */}
               <Link to="/book">
                 <button className="start-button">Start Your Journey</button>
               </Link>
             </div>
-            
+
             <div className="hero-image">
               <img src={image} alt={`Explore the world ${index + 1}`} />
             </div>
@@ -99,8 +98,7 @@ function Section1() {
             key={index}
             className={`dot ${activeIndex === index ? 'active' : ''}`}
             onClick={() => handleDotClick(index)}
-          >
-          </span>
+          />
         ))}
       </div>
     </section>
