@@ -12,7 +12,8 @@
   margin-bottom: 40px;
 }
 
-.left-section {
+.left-section,
+.right-section {
   flex: 1;
   padding: 30px;
 }
@@ -20,7 +21,7 @@
 .heading {
   font-size: 2.5rem;
   margin-bottom: 10px;
-  padding-left: 80px;
+  margin-left: 100px;
 }
 
 .description {
@@ -29,30 +30,43 @@
   font-size:1.3rem;
   margin-bottom: 20px;
   color: #555;
-  padding-left: 80px;
+  margin-left: 100px;
+  
+}
+
+.services-grid ,
+.right-section{
+  flex:1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
 }
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  grid-template-columns: repeat(2, minmax(250px, 1fr));
   gap: 10px;
-  padding-left: 50px;
-}
+  margin-left: 50px;
+} 
 
 .service-card {
-  /* background: #f9f9f9; */
-  padding: 5px;
-  /* border-radius: 10px; */
+  width: auto;
+  /* height: 80px; */
+  background: #f9f9f9;
+  padding: 10px;
+  border-radius: 10px;
   text-align: center;
   transition: transform 0.3s ease;
 }
 
-.service-card:hover {
+.service-image:hover {
   transform: scale(1.05);
 }
 
 .service-image {
-  width: 80px;
+  width: 50%;
   height: 80px;
   margin-bottom: 10px;
   border-radius: 8px;
@@ -64,29 +78,33 @@
 }
 
 .service-description {
-  font-size:1rem;
+  font-size: 1rem;
   color: #777;
+  /* max-width:150px;
+  text-wrap: wrap; */
+  /* text-align: center; */
 }
 
 .right-section {
-  flex: 1;
   display: flex;
-  width: 300px;
-  height: 500px;
-  /* justify-content: center; */
+  justify-content: center;
   align-items: center;
-  padding-top: 60px;
-  padding-right: 30px;
-}
 
-.tourism-image {
-  width: 500px;
-  height: 500px;
-  border-radius: 10px;
 }
-.tourism-image {
+.tourism-image:hover{
   transform: scale(1.05);
 }
+.tourism-image {
+  /* width: 100%; */
+  max-width: 60%;
+  min-height: 70%;
+  border-radius: 10px;
+  margin: auto;
+  margin-top:200px;
+  object-fit: cover;
+  transition: transform 0.3s ease,opacity 0.3s ease;
+}
+
 /* Home CSS */
 .container {
   max-width: 1000px;
@@ -113,6 +131,7 @@
   position:relative;
   margin:50px auto;
   overflow: hidden;
+  transition: transform 0.3s ease,opacity 0.3s ease;
   z-index: 1;
 }
 .image2{
@@ -120,9 +139,10 @@
   bottom:150px;
   left:250px;
   border-radius: 10px;
+  transition: transform 0.3s ease,opacity 0.3s ease;
   z-index:2;
 }
-.image-section {
+.image-section:hover img {
   transform: scale(1.05);
 }
 .text-section {
@@ -151,9 +171,12 @@
   border:1px solid white;
   border-radius: 5px;
   cursor: pointer;
+  transition: transform 0.3s ease,opacity 0.3s ease;
+
 }
-.explore-butto:hover {
+.explore-button:hover {
   background-color:#555;
+  transform: scale(1.05);
 }
 /* Responsive Media Queries */
 @media (max-width: 1200px) {
@@ -194,26 +217,16 @@
   font-size: 1.1rem;
 }
 
-.service-card {
-  padding: 10px;
-}
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .container {
+    grid-template-columns: 1fr;
+  }
+  .right-section {
+    padding: 20px 0;
+  }
 
-.service-image {
-  width: 60px;
-  height: 60px;
-}
-
-.service-name {
-  font-size: 1rem;
-}
-
-.service-description {
-  font-size: 0.9rem;
-}
-
-.tourism-image {
-  height: 300px;
-}
 
 .top-section {
   flex-direction: column;

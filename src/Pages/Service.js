@@ -20,7 +20,11 @@ const ServicePage = () => {
           Book Now
         </button>
       </div>
-
+      <div className="hero-content"><h3>Plan Your Next Getaway Today!</h3>
+        <p>
+          Ready to plan your dream vacation? Contact us today or click the 'Book Now' button to start your journey. 
+          Our travel consultants are here to assist you with every detail, ensuring a seamless and enjoyable experience.
+        </p></div>
       {/* Service Grid */}
       <div className="service-grid">
         <div className="service-card">
