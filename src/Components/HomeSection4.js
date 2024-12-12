@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
-import './CSS/Book.css'; // Ensure the CSS file is imported correctly
+import React, { useState, forwardRef } from 'react';
+import './CSS/HomeSection4.css';
 import image1 from '../Assets/about2.jpg'; // Corrected the import path
 
-const Book = () => {
+// Use forwardRef to wrap your component and pass the ref to the root element
+const HomeSection4 = forwardRef((props, ref) => {
   const [formData, setFormData] = useState({
     name: '',
     mobile: '',
@@ -12,10 +13,9 @@ const Book = () => {
     children: 0,
   });
 
-  const [successMessage, setSuccessMessage] = useState(false); // Change to a boolean for showing/hiding the modal
+  const [successMessage, setSuccessMessage] = useState(false);
 
-  // Dynamically set background image from imported file
-  const backgroundImage = `url(${image1})`; 
+  const backgroundImage = `url(${image1})`;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -27,9 +27,7 @@ const Book = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Show success modal on successful booking
     setSuccessMessage(true);
-    // Clear form after submission
     setFormData({
       name: '',
       mobile: '',
@@ -41,14 +39,15 @@ const Book = () => {
   };
 
   const closeModal = () => {
-    setSuccessMessage(false); // Close the modal
+    setSuccessMessage(false);
   };
 
   return (
     <div
-      className="book-page-container"
+      ref={ref} // Forward the ref to the root div
+      className="home-section4-container"
       style={{
-        backgroundImage: backgroundImage, // Dynamically setting background
+        backgroundImage: backgroundImage,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed',
@@ -56,10 +55,11 @@ const Book = () => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+        padding: '20px',
       }}
     >
-      <div className="book-form-container">
-        <div className="book-page-header">
+      <div className="home-section4-form-container">
+        <div className="home-section4-header">
           <h1>Book Your Journey Now!</h1>
           <p>Fill in the details below to reserve your trip.</p>
         </div>
@@ -88,6 +88,8 @@ const Book = () => {
               onChange={handleChange}
               required
               placeholder="Enter your mobile number"
+              pattern="^[0-9]{10}$"
+              title="Please enter a valid 10-digit mobile number."
             />
           </div>
 
@@ -112,6 +114,7 @@ const Book = () => {
               value={formData.endDate}
               onChange={handleChange}
               required
+              min={formData.startDate}
             />
           </div>
 
@@ -155,7 +158,6 @@ const Book = () => {
         </form>
       </div>
 
-      {/* Success Modal */}
       {successMessage && (
         <div className="success-modal">
           <div className="modal-content">
@@ -169,6 +171,6 @@ const Book = () => {
       )}
     </div>
   );
-};
+});
 
-export default Book;
+export default HomeSection4;
