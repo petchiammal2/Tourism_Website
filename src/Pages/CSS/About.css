@@ -1,4 +1,3 @@
-/* General Style */
 .about-page {
   font-family: "Poppins", Arial, sans-serif;
   color: #646161;
@@ -106,7 +105,7 @@
   text-align: center;
   margin: 50px auto;
   padding: 30px;
-  background-color: #ffffff; 
+  background-color: #ffffff;
   border: 2px solid #ddd;
   border-radius: 10px;
   width: 90%;
@@ -157,7 +156,6 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 25px;
-  animation: rotateContainer 8s infinite linear;
 }
 
 /* Rotate the container in 3D space */
@@ -171,19 +169,6 @@
 }
 
 /* Team Member Image Styles */
-.team-member img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  margin-bottom: 10px;
-  transition: transform 0.3s ease;
-  border: 2px solid #ddd;
-}
-
-.team-member:hover img {
-  transform: scale(1.1);
-}
-
 .team-member {
   width: 250px;
   text-align: center;
@@ -192,35 +177,25 @@
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   opacity: 1;
-  transition: box-shadow 0.4s ease-in-out;
+  transition: box-shadow 0.4s ease-in-out, transform 0.5s ease-in-out;
   perspective: 1000px;
   transform-style: preserve-3d;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
 }
 
 .team-member:hover {
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
-  transform: rotateY(20deg); /* 3D Rotate effect */
+  transform: rotateY(20deg) scale(1.05); /* 3D Rotate effect with slight scale */
+}
+
+/* 3D Flip Text Animation (No Reverse) */
+.team-member .team-text {
+  animation: flipText 1s ease-in-out;
 }
 
 /* Text Flip Animation */
-.team-member:hover h3,
-.team-member:hover p {
-  animation: flipText 1.2s ease-in-out;
-}
-
-.team-member h3 {
-  font-size: 1.3rem;
-  margin-top: 10px;
-  color: #333;
-  font-weight: bold;
-}
-
-.team-member p {
-  font-size: 0.9rem;
-  color: #666;
-}
-
-/* Flip Text Animation */
 @keyframes flipText {
   0% {
     transform: rotateY(180deg);
@@ -234,6 +209,33 @@
     opacity: 1;
     transform: rotateY(0deg);
   }
+}
+
+/* Team Member Image */
+.team-member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+  border: 2px solid #ddd;
+}
+
+.team-member:hover img {
+  transform: scale(1.1);
+}
+
+.team-member h3 {
+  font-size: 1.3rem;
+  margin-top: 10px;
+  color: #333;
+  font-weight: bold;
+}
+
+.team-member p {
+  font-size: 0.9rem;
+  color: #666;
+  transition: transform 0.3s ease;
 }
 
 /* Keyframe Animations */

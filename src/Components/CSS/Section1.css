@@ -23,6 +23,7 @@
   scroll-behavior: smooth;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  overflow-y: hidden; /* Prevent vertical scrolling */
 }
 
 .scroll-container::-webkit-scrollbar {
@@ -123,6 +124,10 @@
   background-color: #333;
 }
 
+.dots.hide {
+  display: none;
+}
+
 /* Responsive Styles */
 
 /* Tablets and Larger Screens (1024px and below) */
@@ -162,6 +167,7 @@
 @media (max-width: 768px) {
   .hero-section {
     flex-direction: column;
+    text-align: center;
   }
 
   .hero-content {
@@ -229,75 +235,5 @@
     width: 100%;
     height: auto;
     margin-top: 15px;
-  }
-}
-
-/* Large Screens (1025px to 1800px) */
-@media (min-width: 1025px) and (max-width: 1800px) {
-  .hero-section {
-    flex-direction: row;
-    padding: 40px;
-  }
-
-  .hero-content {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 40px;
-  }
-
-  .hero-image {
-    width: 50%;
-  }
-
-  .hero-text {
-    text-align: left;
-  }
-
-  .hero-section h1 {
-    font-size: 3rem;
-  }
-
-  .hero-section p {
-    font-size: 1.2rem;
-  }
-
-  .hero-section button {
-    font-size: 1rem;
-    padding: 12px 24px;
-  }
-}
-
-/* Extra Large Screens (1801px and above) */
-@media (min-width: 1801px) {
-  .hero-section {
-    flex-direction: row;
-    padding: 60px;
-  }
-
-  .hero-content {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 60px;
-  }
-
-  .hero-image {
-    width: 45%;
-  }
-
-  .hero-text {
-    text-align: left;
-  }
-
-  .hero-section h1 {
-    font-size: 4rem;
-  }
-
-  .hero-section p {
-    font-size: 1.5rem;
-  }
-
-  .hero-section button {
-    font-size: 1.5rem;
-    padding: 16px 32px;
   }
 }
