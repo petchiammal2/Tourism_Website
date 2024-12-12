@@ -8,7 +8,7 @@
 .image-title {
     font-size: 2rem;
     font-weight: bold;
-    margin-bottom: 20px; /* Center-aligned title */
+    margin-bottom: 50px; /* Center-aligned title */
     color: #000; /* Black text color */
     text-align: center;
     justify-content: center; /* Center-align the rows */
