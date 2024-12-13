@@ -13,7 +13,7 @@ import Header from './Components/Header';
 import Footer from "./Components/Footer";
 import WCintegration from "./Components/WCintegration";
 import Explore from "./Pages/Explore";
-import Book from "./Pages/Book";  // Import the Book component for the booking page
+ 
 
 function App() {
   return (
@@ -35,8 +35,7 @@ function App() {
         <Route path="service" element={<Service />} /> {/* Service Page */}
         <Route path="explore" element={<Explore />} /> {/* Explore Page */}
         
-        {/* Route for the new Book page */}
-        <Route path="book" element={<Book />} />      {/* Booking Page */}
+      
         
         {/* Fallback route for 404 - Page Not Found */}
         <Route path="*" element={<h1>404 - Page Not Found</h1>} /> {/* 404 Page */}
