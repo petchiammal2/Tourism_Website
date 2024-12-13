@@ -10,17 +10,18 @@ import itineraries from '../Assets/itineraries.webp';
 import { handleWhatsAppMessage } from '../Components/WCintegration';
 
 const ServicePage = () => {
+
   return (
     <div className="service-page">
       {/* Hero Section */}
-      <div className="hero-section">
-        <img src={servicebg2} alt="Hero" className="hero-image"/>
-        <h2 className="page-title">Our Services</h2>
-        <button className="hero-button" onClick={() => handleWhatsAppMessage("bookNow")}>
+      <div className="service-section">
+        <img src={servicebg2} alt="Hero" className="service-image"/>
+        <h2 className="service-title">Our Service</h2>
+        <button className="service-button" onClick={() => handleWhatsAppMessage("bookNow")}>
           Book Now
         </button>
       </div>
-      <div className="hero-content"><h3>Plan Your Next Getaway Today!</h3>
+      <div className="service-content"><h3>Plan Your Next Getaway Today!</h3>
         <p>
           Ready to plan your dream vacation? Contact us today or click the 'Book Now' button to start your journey. 
           Our travel consultants are here to assist you with every detail, ensuring a seamless and enjoyable experience.
@@ -51,6 +52,7 @@ const ServicePage = () => {
         <div className="service-card">
           <div className="service-icon">
           <img src={transport} alt="ServiceImage" />
+
           </div>
           <h3 className="service-name">Transportation Service</h3>
           <p className="service-description">Reliable car rentals and airport transfers for hassle-free travel.</p>

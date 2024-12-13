@@ -40,38 +40,39 @@ const HomePage = () => {
   ];
 
   return (
-    <div className="homepage-container">
-      {/* HomeSection3 */}
-      <div className="tourism-container">
-        <div className="left-section">
-          <h3 className="heading">Why Choose Us</h3>
-          <p className="description">
+    <div className="Homepage-container">
+      {/* Home2 */}
+      <h3 className="Home2-heading">Why Choose Us</h3>
+          <p className="Home2-description">
             Discover why we are the best choice for your travel needs. With
             top-notch services and customer satisfaction as our priority, your journey is in good hands.
           </p>
-          <div className="services-grid">
+      <div className="Home2-container">
+      
+        <div className="Home2-left">
+          <div className="Home2-services-grid">
             {services.map((service) => (
-              <div key={service.id} className="service-card">
-                <img src={service.image} alt={service.name} className="service-image" />
-                <h4 className="service-name">{service.name}</h4>
-                <p className="service-description">{service.description}</p>
+              <div key={service.id} className="Home2-service-card">
+                <img src={service.image} alt={service.name} className="Home2-service-image" />
+                <h4 className="Home2-service-name">{service.name}</h4>
+                <p className="Home2-service-description">{service.description}</p>
               </div>
             ))}
           </div>
         </div>
-        <div className="right-section">
-          <img src={img6} alt="Tourism" className="tourism-image" />
+        <div className="Home2-right">
+          <img src={img6} alt="Tourism" className="Home2-image" />
         </div>
       </div>
 
-      {/* Home */}
-      <div className="container">
-        <div className="top-section">
-          <div className="image-section">
-            <img src={img1} alt="Modern Bedroom Design" className="image1" />
-            <img src={img2} alt="Modern Bedroom Design" className="image2" />
+      {/* Home3 */}
+      <div className="Home3-container">
+        <div className="Home3-top">
+          <div className="Home3-image">
+            <img src={img1} alt="Modern Bedroom Design" className="Home3-image1" />
+            <img src={img2} alt="Modern Bedroom Design" className="Home3-image2" />
           </div>
-          <div className="text-section">
+          <div className="Home3-text">
             <h2>We Help You Explore the World</h2>
             <p>
               Embark on unforgettable journeys with our expert travel services. 
@@ -89,7 +90,7 @@ const HomePage = () => {
                 <strong>Exclusive Deals:</strong> Enjoy great savings on premium packages.
               </li>
             </ul>
-            <button className="explore-button">Explore</button>
+            <button className="Home3-btn">Explore</button>
           </div>
         </div>
       </div>

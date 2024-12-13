@@ -1,13 +1,9 @@
 
 import Section1 from "../Components/Section1";
 import HomeSection1 from "../Components/HomeSection1";
-
 import HomeSection3 from "../Components/HomeSection3";
-import Destinations from "../Components/Destinations";
-
-
-
-
+// import Destinations from "../Components/Destinations";
+import HomeSection5 from "../Components/HomeSection5";
 
 
 const Home = () => {
@@ -18,7 +14,9 @@ const Home = () => {
       <HomeSection1/>
 
       <HomeSection3/>
-      <Destinations/>
+      <HomeSection5/>
+
+      {/* <Destinations/> */}
     
    </>
      
