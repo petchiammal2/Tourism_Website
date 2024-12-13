@@ -1,66 +1,112 @@
-
-
-/* Grid Section */
-.explore-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Always three columns */
-  gap: 20px; /* Space between the items */
-  padding: 20px;
-  justify-content: center; /* Center-align the grid */
-  align-items: center; 
-  padding: 5%;/* Align items vertically in the grid */
+/* Most Famous Places Section */
+.famous-places {
+  padding: 3rem 2rem;
+  text-align: center;
 }
-/* Grid item styling */
 
-.grid-item {
+.famous-places h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+/* Grid Layout for Places */
+.places-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Default: 3 containers in a row */
+  gap: 2rem;
+  justify-content: center;
+}
+
+.place-card {
   background-color: white;
+  border: 1px solid #ddd;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: transform 0.2s;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  opacity: 0.8;
 }
 
-.grid-item:hover {
-  transform: scale(1.05);
+/* Hover Effect for Place Card */
+.place-card:hover {
+  transform: translateY(-10px); /* Slightly lift the card */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow for emphasis */
+  opacity: 1; /* Bring opacity back to full */
 }
 
-/* Grid item image styling */
-.grid-image {
+/* Image Styles */
+.place-card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
 }
 
-/* Grid item title styling */
-.grid-title {
-  text-align: center;
-  font-size: 1.2rem;
-  font-weight: bold;
-  padding: 10px;
+.place-card h3 {
+  font-size: 1.5rem;
+  margin: 1rem 0;
 }
 
-/* Media Queries for Responsive Design */
+.place-card p {
+  font-size: 1rem;
+  color: #555;
+  padding: 0 1rem;
+}
 
-/* For smaller screens (tablets, small laptops) */
+.discover-button {
+  padding: 0.8rem 1.5rem;
+  background-color: gray;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin: 1rem 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.discover-button:hover {
+  background-color: lightgray;
+}
+
+/* Responsive Styles */
+
+/* For Tablets: 2 containers in a row */
 @media (max-width: 768px) {
-  .explore-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust grid column size */
+  .places-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .place-card img {
+    height: 180px; /* Slightly smaller images */
   }
 }
 
-/* For very small screens (phones) */
+/* For Mobile Devices: 1 container in a row */
 @media (max-width: 480px) {
-  .explore-grid {
-    grid-template-columns: 1fr; /* Single column layout */
-    gap: 15px; /* Slightly smaller gap */
+  .places-grid {
+    grid-template-columns: 1fr;
   }
-  
-  .grid-title {
-    font-size: 1rem; /* Adjust font size */
+
+  .place-card img {
+    height: 160px; /* Smaller images for mobile */
+  }
+
+  .place-card h3 {
+    font-size: 1.2rem; /* Smaller heading */
+  }
+
+  .place-card p {
+    font-size: 0.9rem; /* Smaller text */
+  }
+
+  .discover-button {
+    font-size: 0.9rem; /* Smaller button size */
   }
 }
-
-
-
-
- 
