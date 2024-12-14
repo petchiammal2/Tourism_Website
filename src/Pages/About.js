@@ -2,7 +2,7 @@ import React from 'react';
 import './CSS/About.css'; // Import CSS for styling
 
 // Import images from the Assets folder
-import About6 from '../Assets/about0.webp';
+import About6 from '../Assets/about.avif';
 import About3 from '../Assets/about3.jpg';
 import About4 from '../Assets/about4.jpg';
 import About5 from '../Assets/about5.jpg';
@@ -25,6 +25,7 @@ const About = () => {
         </div>
       </div>
 
+      {/* Overlay Description Section */}
       <div className="overlay-description2">
         <h2>Discover the World Through Travel</h2>
         <p>
@@ -57,39 +58,69 @@ const About = () => {
         </div>
       </div>
 
+      {/* Company Description Section */}
+      <div className="company-description">
+        <h2>About Our Company</h2>
+        <p>
+          We are passionate about offering unforgettable travel experiences. Our team works tirelessly to bring you the best tours and packages, ensuring your journey is not just a vacation but an adventure of a lifetime. Whether you're looking to relax on a beach, explore a new city, or immerse yourself in nature, we've got you covered. Join us as we take you to some of the most amazing destinations around the world!
+        </p>
+      </div>
+
       {/* Team Section */}
       <div className="team-section">
         <h2 className="team-heading">Meet Our Team</h2>
         <div className="team-container">
+          {/* Team Member 1 */}
           <div className="team-member">
-            <img src={MAN2} alt="Receptionist" className="team-image" />
-            <h3>Jane Smith</h3>
-            <p>Manager</p>
-            <p>Email: jane.smith@example.com</p>
-            <p>Phone: +123 456 7891</p>
+            <div className="team-member-inner">
+              {/* Image Layer (Front) */}
+              <div className="team-image">
+                <img src={MAN2} alt="Manager" />
+              </div>
+              {/* Text Layer (Back) */}
+              <div className="team-text">
+                <h3>Jane Smith</h3>
+                <p>Manager</p>
+                <p>Email: jane.smith@example.com</p>
+                <p>Phone: +123 456 7891</p>
+              </div>
+            </div>
           </div>
+
+          {/* Team Member 2 */}
           <div className="team-member">
-            <img src={MAN3} alt="Housekeeping" className="team-image" />
-            <h3>Emily Davis</h3>
-            <p>Guide</p>
-            <p>Email: emily.davis@example.com</p>
-            <p>Phone: +123 456 7892</p>
+            <div className="team-member-inner">
+              {/* Image Layer (Front) */}
+              <div className="team-image">
+                <img src={MAN3} alt="Guide" />
+              </div>
+              {/* Text Layer (Back) */}
+              <div className="team-text">
+                <h3>Emily Davis</h3>
+                <p>Guide</p>
+                <p>Email: emily.davis@example.com</p>
+                <p>Phone: +123 456 7892</p>
+              </div>
+            </div>
           </div>
+
+          {/* Team Member 3 */}
           <div className="team-member">
-            <img src={MAN1} alt="Housekeeping" className="team-image" />
-            <h3>Emily Davis</h3>
-            <p>Guide</p>
-            <p>Email: emily.davis@example.com</p>
-            <p>Phone: +123 456 7892</p>
+            <div className="team-member-inner">
+              {/* Image Layer (Front) */}
+              <div className="team-image">
+                <img src={MAN1} alt="Guide" />
+              </div>
+              {/* Text Layer (Back) */}
+              <div className="team-text">
+                <h3>Michael Brown</h3>
+                <p>Guide</p>
+                <p>Email: michael.brown@example.com</p>
+                <p>Phone: +123 456 7895</p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-
-      {/* Footer Section */}
-      <div className="subscript">
-        <hr />
-        <p>Copyright ©2023 Mr. Vinoth Kumar. All Rights Reserved.</p>
-        <p>Follow Me</p>
       </div>
     </div>
   );

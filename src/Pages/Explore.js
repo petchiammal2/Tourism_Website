@@ -1,10 +1,16 @@
+import React from "react";
+import Explorehero from "../Components/Explorehero";
 import  Explores from "../Components/Explores";
+
 const Explore = () => {
     return (
-      <>
-      <Explores />
+      <div className="Explore">
+        <Explorehero/>
+        <Explores />
+      </div>
       
-      </>
+      
+    
     )
   };
   

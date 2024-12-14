@@ -11,7 +11,8 @@
   object-fit: cover;
   max-height: 650px; /* Maximum width for large screens */
   transform: none;
-  pointer-events: none; /* Disables all interactions (optional) */
+  pointer-events: none;
+ /* Disables all interactions (optional) */
 }
 
 .gallery-text {
@@ -53,6 +54,27 @@
 
   }
 }
+/* Apply the animation to the blog image */
+.gallery-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 650px;
+  transform: none;
+  pointer-events: none; /* Disables all interactions (optional) */
+  animation: zoomIn 3s ease-in-out forwards; /* Run once and stay at the final state */
+}
+
+/* Keyframes for zoom in animation */
+@keyframes zoomIn {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1); /* Slight zoom-in */
+  }
+}
+
 
 
 

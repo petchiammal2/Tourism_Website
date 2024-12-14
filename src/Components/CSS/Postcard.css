@@ -1,15 +1,15 @@
 /* Grid container */
-.tourism-grid {
+.post-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Default: 3 columns */
+  grid-template-columns: repeat(3, 1fr); /* Three columns per row */
   gap: 20px;
   padding: 20px;
-  animation: fadeIn 1s ease-in-out; 
-  padding: 5%;/* Fade-in effect for the grid container */
+  animation: fadeIn 1s ease-in-out;
+  padding: 5%; /* Fade-in effect for the grid container */
 }
 
 /* Grid item styling */
-.tourism-item {
+.post-item {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -19,27 +19,26 @@
   animation: slideUp 0.5s ease-in-out both; /* Slide-up animation */
 }
 
-.tourism-item:hover {
+.post-item:hover {
   transform: scale(1.05); /* Slight zoom effect */
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
 }
 
 /* Image styling */
-.tourism-image {
+.post-image {
   width: 100%;
   height: 200px;
   object-fit: cover;
   border-bottom: 2px solid #ddd;
-  transition: transform 0.3s ease; 
-  /* Smooth image scaling */
+  transition: transform 0.3s ease; /* Smooth image scaling */
 }
 
-.tourism-item:hover .tourism-image {
+.post-item:hover .post-image {
   transform: scale(1.1); /* Zoom-in on hover */
 }
 
 /* Title styling */
-.tourism-title {
+.post-title {
   font-size: 20px;
   font-weight: bold;
   margin: 15px 0 10px;
@@ -47,12 +46,13 @@
   transition: color 0.3s ease; /* Smooth color transition */
 }
 
-.tourism-item:hover .tourism-title {
-  color: lightblue; /* Change title color on hover */
+
+.post-item:hover .post-title {
+  color: lightgray; /* Change title color on hover */
 }
 
 /* Description styling */
-.tourism-description {
+.post-description {
   font-size: 14px;
   color: #666;
   padding: 0 15px 15px;
@@ -83,9 +83,9 @@
 .read-more {
   display: inline-block;
   margin-top: 10px;
-  padding: 9px 18px;
-  background-color: gray; /* Button color */
-  color: lightgoldenrodyellow;
+  padding: 8px 16px;
+  background-color:lightgray; /* Button color */
+  color: white;
   font-size: 14px;
   font-weight: bold;
   border: none;
@@ -95,21 +95,16 @@
 }
 
 .read-more:hover {
-  background-color: lightgrey; /* Darker shade on hover */
+  background-color:lightgrey; /* Darker shade on hover */
 }
-
-/* Responsive Design - Adjust grid for smaller screens */
-
-/* For tablets (768px and below) */
-@media (max-width: 768px) {
-  .tourism-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+@media (max-width: 1024px) {
+  .post-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
   }
 }
 
-/* For mobile phones (480px and below) */
-@media (max-width: 480px) {
-  .tourism-grid {
-    grid-template-columns: 1fr; /* 1 column for mobile phones */
+@media (max-width: 768px) {
+  .post-grid {
+    grid-template-columns: repeat(1, 1fr); /* Single column for mobile */
   }
 }
