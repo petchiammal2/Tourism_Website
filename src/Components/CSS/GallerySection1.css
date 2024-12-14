@@ -9,7 +9,11 @@
 .gallery-image {
   width: 100%; /* Full width on smaller screens */
   height: auto; /* Maintain aspect ratio */
+<<<<<<< Updated upstream
   margin-top: 50px;
+=======
+  margin-top: 90px;
+>>>>>>> Stashed changes
 }
 
 /* Media query for larger screens */
