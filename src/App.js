@@ -1,5 +1,5 @@
-import './App.css'; // Ensure your styles are properly linked
 
+import './App.css'; // Ensure your styles are properly linked
 import React from "react";
 import { Routes, Route } from "react-router-dom";  // Import necessary components from react-router-dom
 import Home from "./Pages/Home";

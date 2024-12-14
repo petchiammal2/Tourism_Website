@@ -1,19 +1,40 @@
-// ContactPage.js
 import React from 'react';
+import { useRef } from 'react';
+import emailjs from 'emailjs-com';
 import './CSS/Contact.css';
 import transportation from '../Assets/transportation.webp';
 import phone from '../Assets/phone.webp';
 import email from '../Assets/email.webp';
 import location from '../Assets/location.webp';
 
-
 const ContactPage = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.init('mWdWnSzZphtckG2Bm'); // Initialize with the public key
+
+    emailjs
+      .sendForm('service_pr3ctbc', 'template_2lh0cqs', form.current)
+      .then(
+        () => {
+          window.alert("Your message has been sent successfully!");
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          window.alert("Failed to send your message. Please try again.");
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
+
   return (
     <div className="contact-page">
       {/* Full Cover Image with Heading */}
       <div className="cover-image">
-        <img src={transportation} className="contact-img" alt="hero image" />
-        <h1 >Contact</h1>
+        <img src={transportation} alt="hero image" />
+        <h1>Contact</h1>
         <p>Reach out to us for any tourism-related queries or assistance.</p>
       </div>
 
@@ -41,12 +62,14 @@ const ContactPage = () => {
 
         {/* Right Section */}
         <div className="contact-right">
-          <input type="text" placeholder="Your Name" />
-          <input type="text" placeholder="Your Phone" />
-          <input type="email" placeholder="Your Email" />
-          <input type="text" placeholder="Subject" />
-          <textarea placeholder="Your Message"></textarea>
-          <button type="submit">Submit</button>
+          <form ref={form} onSubmit={sendEmail}>
+            <input type="text" placeholder="Your Name" name="user_name" required />
+            <input type="text" placeholder="Your Phone" name="user_phone" required />
+            <input type="email" placeholder="Your Email" name="user_email" required />
+            <input type="text" placeholder="Subject" name="user_subject" />
+            <textarea placeholder="Your Message" name="user_message"></textarea>
+            <button type="submit">Submit</button>
+          </form>
         </div>
       </div>
 
