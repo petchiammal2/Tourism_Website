@@ -1,3 +1,13 @@
+
+.recent-locations {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.recent-locations h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
 /* Grid container */
 .post-grid {
   display: grid;
@@ -6,6 +16,7 @@
   padding: 20px;
   animation: fadeIn 1s ease-in-out;
   padding: 5%; /* Fade-in effect for the grid container */
+  
 }
 
 /* Grid item styling */
@@ -15,9 +26,10 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  animation: slideUp 0.5s ease-in-out both; /* Slide-up animation */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  opacity: 0.8;
 }
+
 
 .post-item:hover {
   transform: scale(1.05); /* Slight zoom effect */
@@ -108,3 +120,4 @@
     grid-template-columns: repeat(1, 1fr); /* Single column for mobile */
   }
 }
+  

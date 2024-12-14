@@ -7,7 +7,8 @@ function Blog() {
     <div className="Blog">
       
       <BlogSection/>
-      <Postcard />
+      <Postcard/>
+      
 
     </div>
   );
