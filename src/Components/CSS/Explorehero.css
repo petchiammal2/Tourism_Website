@@ -46,8 +46,8 @@
   }
   
   .Explore-button {
-    background-color: #ff7f50; /* Coral color */
-    color: white;
+    background-color:gray; /* Coral color */
+    color:black;
     border: none;
     padding: 0.8rem 2rem;
     font-size: 1rem;
@@ -57,7 +57,7 @@
   }
   
   .Explore-button:hover {
-    background-color: #e67343;
+    background-color:lightgrey;
   }
   
   @keyframes fadeIn {

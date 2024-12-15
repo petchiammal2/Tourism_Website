@@ -1,0 +1,79 @@
+/* Style for the Vacation Ideas section */
+.vacation-ideas {
+  padding: 2rem; /* Add spacing around the section */
+  background-color: #f5f5f5; /* Light gray background color */
+  text-align: center; /* Center-align text */
+  opacity: 0;
+  animation: fadeIn 2s forwards; /* Fade in the section */
+}
+
+/* Fade-in animation for the section */
+@keyframes fadeIn {
+  to {
+    opacity: 1; /* Fully visible */
+  }
+}
+
+.vacation-ideas h3 {
+  font-size: 2rem; /* Font size for the heading */
+  font-weight: bold; /* Bold font for the heading */
+  color: #2c3e50; /* Dark blue-gray color */
+  margin-bottom: 1.5rem; /* Add space below the heading */
+}
+
+.ideas {
+  display: flex; /* Flexbox for arranging ideas */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  justify-content: center; /* Center-align the ideas */
+  gap: 1.5rem; /* Add space between items */
+}
+
+.ideas-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 30px;
+  opacity: 0;
+  animation: fadeInCard 1s ease-out forwards;
+}
+
+/* Fade-in animation for the cards */
+@keyframes fadeInCard {
+  to {
+    opacity: 1; /* Make the card visible */
+  }
+}
+
+/* Add a slight delay for each card to create a staggered fade-in effect */
+.ideas-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.ideas-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.ideas-card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.ideas-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.ideas-card h4 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: #333;
+}
+
+/* Hover animation for ideas cards */
+.ideas-card:hover {
+  transform: scale(1.05); /* Slightly scale up the card */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}

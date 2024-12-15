@@ -1,0 +1,72 @@
+/* Features Section */
+.features {
+    padding: 3rem 2rem;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+  }
+  
+  .features h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+  }
+  
+  .features div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns layout by default */
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  
+  .features div > div {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+  }
+  
+  .features div > div:hover {
+    transform: translateY(-10px); /* Slight lift effect */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow for emphasis */
+  }
+  
+  .features div > div h4 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: #8a2be2; /* Purple color for the title */
+  }
+  
+  .features div > div p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Responsive Styles */
+  
+  /* For Tablets: 2 columns in a row */
+  @media (max-width: 768px) {
+    .features div {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* For Mobile Devices: 1 column in a row */
+  @media (max-width: 480px) {
+    .features div {
+      grid-template-columns: 1fr;
+    }
+  
+    .features div > div h4 {
+      font-size: 1.2rem; /* Smaller title on mobile */
+    }
+  
+    .features div > div p {
+      font-size: 0.9rem; /* Smaller text on mobile */
+    }
+  }
+  

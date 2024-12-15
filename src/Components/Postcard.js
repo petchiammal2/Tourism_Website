@@ -8,8 +8,6 @@ import Switzerland from "../Assets/Switzerland.jpg";
 import Austraila from "../Assets/Austraila.jpg";
 import France from "../Assets/France.jpg";
 import Maldives from "../Assets/Maldives.jpg";
-import Italy from "../Assets/Italy.jpg";
-import japan from "../Assets/japan.jpg";
 
 const Postcard = () => {
   
@@ -35,16 +33,8 @@ const Postcard = () => {
       image: Maldives,
       description:" The Maldives is known for its luxurious resorts, many of which are situated on private islands and offer overwater bungalows with direct access to the ocean. These resorts provide the ultimate in privacy and comfort, with world-class amenities and exceptional views, making the Maldives."
      },
-    {
-      title: "Italy",
-      image: Italy,
-      description: " Italy, located in Southern Europe,art, culture, and breathtaking landscapes. Shaped like a boot, Italy is surrounded by the Mediterranean Sea, bordered by France, Switzerland, Austria, and Slovenia to the north. "
-     },
-    {
-      title: "japan",
-      image: japan,
-      description: " Japan, an island nation in East Asia, is known for its harmonious blend of ancient traditions and cutting-edge modernity. Located in the Pacific Ocean, Japan is composed of four main islands—Honshu."
-     },
+    
+    
   ];
 
   return (
