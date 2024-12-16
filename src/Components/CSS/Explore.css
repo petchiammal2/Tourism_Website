@@ -7,12 +7,14 @@
 .famous-places h2 {
   font-size: 2rem;
   margin-bottom: 0.5rem;
+  color: black;
 }
 
 .subtitle {
   font-size: 1rem;
   color: #666;
   margin-bottom: 2rem;
+  color: black;
 }
 
 /* Grid Layout for Places */
