@@ -3,7 +3,11 @@
   padding: 50px 20px;
   background-color: #f4f4f4;
 }
-
+.features:hover {
+  background-color:lightgrey;
+  color: white;
+  transform: translateY(-10px);
+}
 .features h1 {
   font-size: 2.5rem;
   font-weight: 700;
