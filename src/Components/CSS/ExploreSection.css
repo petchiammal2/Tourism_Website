@@ -1,0 +1,156 @@
+/* Home Section Container */
+.explore-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+    background: linear-gradient(135deg,lightgrey,white 100%); 
+    text-align: center;
+    min-height: 100vh; /* Full height */
+    position: relative;
+    transition: background 1s ease-in-out;
+  }
+  
+  /* Main Content */
+  .explore-content {
+    display: flex;
+    flex-direction: row-reverse; /* Text and image alignment */
+    max-width: 1200px;
+    align-items: center;
+    gap: 70px; /* Add space between text and images */
+    animation: slideIn 1s ease-in-out;
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Image Container */
+  .explore-image-outer-container {
+    display: flex;
+    justify-content: space-between; /* Equal spacing between images */
+    align-items: center;
+    gap: 20px; /* Space between images */
+    width: 100%; 
+    height: 60vh; /* Adjust width for better balance */
+    position: relative;
+  }
+  
+  .explore-image img {
+    width: 100%; /* Full width images */
+    height: 50vh;
+    border-radius: 15px;
+    object-fit: cover;
+    animation: zoom-in 1s ease-in-out;
+    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth transition effects */
+  }
+  
+  /* Hover Zoom Effect on Images */
+  .explore-image img:hover {
+    transform: scale(1.15); /* Stronger zoom effect */
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+  }
+  
+  /* Text Section */
+  .explore-text {
+    max-width: 500px;
+    text-align: left; /* Align text to the left for better readability */
+    width: 40%; /* Adjust text width to balance with images */
+    animation: fade-in 1s ease-in-out;
+    z-index: 2;
+  }
+  
+  .explore-text h1 {
+    font-size: 3rem; /* Increase font size for header */
+    margin-bottom: 20px;
+    color: #01070e;
+  }
+  
+  .explore-text p {
+    font-size: 1.3rem; /* Larger text for better readability */
+    margin-bottom: 20px;
+    color: #01070e;
+  }
+  
+  .explore-text button {
+    padding: 14px 28px;
+    font-size: 1.1rem;
+    background-color: #000000;
+    color: #f7f7f7;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .explore-text button:hover {
+    background-color: #b0c1d6;
+    transform: scale(1.1);
+  }
+  
+  /* Responsive Design for Tablets */
+  @media (max-width: 768px) {
+    .explore-content {
+      flex-direction: column;
+      align-items: center; /* Center alignment for better layout */
+      gap: 20px;
+    }
+  
+    .explore-image-outer-container {
+      flex-wrap: wrap;
+      width: 100%;
+      gap: 15px;
+      justify-content: center; /* Center images on smaller screens */
+    }
+  
+    .explore-image img {
+      width: 80%; /* Slightly larger image size on tablets for better visibility */
+      height: auto; /* Maintain aspect ratio */
+    }
+  
+    .explore-text {
+      width: 90%; /* Slightly wider for better readability */
+      text-align: center;
+    }
+  
+    .explore-text h1 {
+      font-size: 2.5rem; /* Reduce font size for tablets */
+    }
+  
+    .explore-text p {
+      font-size: 1.2rem; /* Adjust text size for readability */
+    }
+  }
+  
+  /* Responsive Design for Mobile */
+  @media (max-width: 480px) {
+    .explore-content {
+      flex-direction: column;
+      gap: 15px; /* Adjust gap for smaller screens */
+      align-items: center; /* Center content on mobile */
+    }
+  
+    .explore-image img {
+      width: 100%; /* Images take full width on mobile */
+      height: auto; /* Maintain aspect ratio */
+    }
+  
+    .explore-image-outer-container {
+      flex-direction: column;
+      gap: 10px; /* Reduce spacing for smaller screens */
+      justify-content: center; /* Center images vertically */
+    }
+  
+    .explore-text {
+      width: 100%; /* Full width text for small screens */
+      text-align: center;
+    }
+  
+    .explore-text h1 {
+      font-size: 2rem; /* Further reduce font size for mobile */
+    }
+  
+    .explore-text p {
+      font-size: 1rem; /* Adjust text size */
+    }
+  }
+  

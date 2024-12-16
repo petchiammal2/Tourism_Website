@@ -5,7 +5,7 @@ import './CSS/Explore.css';
 import Beach from "../Assets/beach.jpg";
 import cliff from "../Assets/cliff.jpg";
 import sunset from "../Assets/sunset.jpg";
-import Maldives  from "../Assets/Maldives.jpg";
+import rainforest  from "../Assets/rainforest.jpg";
 import norway from "../Assets/norway.jpg";
 import resort from "../Assets/resorts.jpg";
 function Explores() {
@@ -39,15 +39,15 @@ Best Spots: Sahara Desert, Arizona, Dubai.Mountain Sunset</p>
             <button className="discover-button">Discover place</button>
           </div>
           <div className="place-card">
-            <img src={Maldives} alt="Maldives" />
-            <h3>Maldives</h3>
-            <p>The city of light and romance.The Maldives is renowned for its unique geography, luxury experiences, and pristine natural beauty. Here are the key ways the Maldives stands out compared to other destinations and what makes it so distinctive.</p>
+            <img src={rainforest} alt="rainforest" />
+            <h3>raiforest</h3>
+            <p>The city of light and romance.The rainforest is renowned for its unique geography, luxury experiences, and pristine natural beauty. Here are the key ways the Maldives stands out compared to other destinations and what makes it so distinctive.</p>
             <button className="discover-button">Discover place</button>
           </div>
           <div className="place-card">
             <img src={norway} alt="norway" />
             <h3>norway</h3>
-            <p>Explore the iconic canals and vibrant streets.Norway is home to some of the world’s most dramatic fjords, including the UNESCO-listed Geirangerfjord and Nærøyfjord. These deep, narrow inlets are surrounded by steep cliffs and are unique to countries with glacial terrains</p>
+            <p>Explore the iconic canals and vibrant streets.Norway is home to some of the world most dramatic fjords, including the UNESCO-listed Geirangerfjord and Nærøyfjord. These deep, narrow inlets are surrounded by steep cliffs and are unique to countries with glacial terrains</p>
             <button className="discover-button">Discover place</button>
           </div>
           <div className="place-card">
