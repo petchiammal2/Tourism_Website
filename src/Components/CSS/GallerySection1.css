@@ -3,17 +3,15 @@
   display: flex;
   flex-direction: column;
   gap: 50px; /* Adds space between images */
+  margin-bottom: 80px;
 }
 
 /* Image styling */
 .gallery-image {
   width: 100%; /* Full width on smaller screens */
   height: auto; /* Maintain aspect ratio */
-<<<<<<< Updated upstream
-  margin-top: 50px;
-=======
-  margin-top: 90px;
->>>>>>> Stashed changes
+  margin-top: 150px;
+  margin-bottom: 80px;
 }
 
 /* Media query for larger screens */

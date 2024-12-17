@@ -2,17 +2,14 @@
 .gallery-containers {
     padding: 30px;
     text-align: center;
+    margin-bottom: 80px;
 }
   
 /* Title styling */
 .gallery-title {
     font-size: 2rem;
     font-weight: bold;
-<<<<<<< Updated upstream
-    margin-bottom: 20px; /* Center-aligned title */
-=======
-    margin-bottom: 60px; /* Center-aligned title */
->>>>>>> Stashed changes
+    margin-bottom: 80px; /* center-aligned title */
     color: #000; /* Black text color */
     text-align: center;
     justify-content: center; /* Center-align the rows */
@@ -36,6 +33,7 @@
     overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 80px;
 
 }
 
