@@ -3,7 +3,8 @@ import './CSS/GallerySection3.css';
 import Image1 from '../Assets/pic_4.webp';  // Corrected path
 import Image2 from '../Assets/pic_5.webp';  // Corrected path
 import Image3 from '../Assets/pic_6.webp';  // Corrected path
-import Image4 from '../Assets/pic_7.webp';  // Corrected path
+import Image4 from '../Assets/Pic_7.webp';  // Corrected path
+
 
 const images = [Image1,Image2,Image3,Image4];
 

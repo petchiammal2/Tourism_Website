@@ -2,6 +2,14 @@
 .gallery-containers {
     padding: 30px;
     text-align: center;
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+    /* margin-bottom: 80px; */
+=======
+    margin-bottom: 80px;
+>>>>>>> 983278953caa1860f7b30082e4a5aa85de66fca7
+>>>>>>> Stashed changes
 }
   
 /* Title styling */
@@ -53,7 +61,7 @@
 }
 
 /* Responsive adjustments */
-@media (max-width: 600px) {
+@media (max-width: 480px) {
     .gallery-title {
         font-size: 1.5rem;
     }
@@ -61,6 +69,12 @@
         gap: 10px;
         flex-direction: column; /* Stack items vertically on small screens */
         align-items: center; /* Center-align the stacked items */
+    }
+    .gallery-item {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px;
     }
 }
 @media screen and (min-width: 1024px) {
