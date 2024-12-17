@@ -1,72 +1,101 @@
-/* Features Section */
 .features {
-    padding: 3rem 2rem;
-    text-align: center;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-top: 2rem;
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f4f4f4;
+}
+.features:hover {
+  background-color:lightgrey;
+  color: white;
+  transform: translateY(-10px);
+}
+.features h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Add animation to the container */
+.feature-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  animation: containerFadeIn 1s ease-out forwards; /* Container fade-in animation */
+}
+
+@keyframes containerFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); /* Start from a lower position */
   }
-  
-  .features h3 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    color: #333;
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at the normal position */
   }
-  
-  .features div {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns layout by default */
-    gap: 1.5rem;
-    justify-content: center;
+}
+
+.feature-item {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0; /* Initially hidden */
+  transform: translateY(30px) rotateY(15deg); /* Start with a rotated position */
+  transition: all 0.3s ease-in-out;
+  animation: featureItemFadeIn 0.8s ease-out forwards; /* Individual item fade-in */
+}
+
+.feature-item:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+.feature-item:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.feature-item:nth-child(3) {
+  animation-delay: 0.7s;
+}
+
+@keyframes featureItemFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) rotateY(15deg); /* Items start lower and rotated */
   }
-  
-  .features div > div {
-    background-color: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotateY(0deg); /* Items end at their normal position */
   }
-  
-  .features div > div:hover {
-    transform: translateY(-10px); /* Slight lift effect */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow for emphasis */
-  }
-  
-  .features div > div h4 {
-    font-size: 1.4rem;
-    margin-bottom: 0.5rem;
-    color: #8a2be2; /* Purple color for the title */
-  }
-  
-  .features div > div p {
-    font-size: 1rem;
-    color: #555;
-  }
-  
-  /* Responsive Styles */
-  
-  /* For Tablets: 2 columns in a row */
-  @media (max-width: 768px) {
-    .features div {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  /* For Mobile Devices: 1 column in a row */
-  @media (max-width: 480px) {
-    .features div {
-      grid-template-columns: 1fr;
-    }
-  
-    .features div > div h4 {
-      font-size: 1.2rem; /* Smaller title on mobile */
-    }
-  
-    .features div > div p {
-      font-size: 0.9rem; /* Smaller text on mobile */
-    }
-  }
-  
+}
+
+/* 3D hover effect */
+.feature-item:hover {
+  transform: translateY(-5px) rotateY(10deg) scale(1.05); /* Apply rotation, slight scale effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Smooth transition for the hover effect */
+.feature-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.feature-item h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.feature-item p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}

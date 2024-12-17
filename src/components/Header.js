@@ -74,6 +74,15 @@ function Header() {
                     </li>
                     <li>
                         <NavLink
+                            to="/Explore"
+                            className={({ isActive }) => (isActive ? "active" : "")}
+                            onClick={() => setIsMenuOpen(false)}
+                        >
+                            Explore
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
                             to="Gallery"
                             className={({ isActive }) => (isActive ? "active" : "")}
                             onClick={() => setIsMenuOpen(false)}
