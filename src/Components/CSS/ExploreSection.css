@@ -1,4 +1,4 @@
-/* Home Section Container */
+/* explore Section Container */
 .explore-section {
     display: flex;
     align-items: center;
@@ -9,6 +9,7 @@
     min-height: 100vh; /* Full height */
     position: relative;
     transition: background 1s ease-in-out;
+    
   }
   
   /* Main Content */
@@ -21,6 +22,8 @@
     animation: slideIn 1s ease-in-out;
     position: relative;
     z-index: 2;
+  padding: 5%;
+  
   }
   
   /* Image Container */
@@ -32,6 +35,7 @@
     width: 100%; 
     height: 60vh; /* Adjust width for better balance */
     position: relative;
+  
   }
   
   .explore-image img {
@@ -41,6 +45,7 @@
     object-fit: cover;
     animation: zoom-in 1s ease-in-out;
     transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth transition effects */
+    
   }
   
   /* Hover Zoom Effect on Images */
