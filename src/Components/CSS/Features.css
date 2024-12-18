@@ -8,6 +8,7 @@
   color: white;
   transform: translateY(-10px);
 }
+
 .features h1 {
   font-size: 2.5rem;
   font-weight: 700;
@@ -25,6 +26,7 @@
   animation: containerFadeIn 1s ease-out forwards; /* Container fade-in animation */
 }
 
+
 @keyframes containerFadeIn {
   0% {
     opacity: 0;
@@ -37,16 +39,17 @@
 }
 
 .feature-item {
-  background-color: white;
+  background-color: whitesmoke;
   border-radius: 8px;
   padding: 20px;
   width: 300px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  opacity: 0; /* Initially hidden */
+  opacity: 0; /* Initially hiddens */
   transform: translateY(30px) rotateY(15deg); /* Start with a rotated position */
   transition: all 0.3s ease-in-out;
   animation: featureItemFadeIn 0.8s ease-out forwards; /* Individual item fade-in */
 }
+
 
 .feature-item:nth-child(1) {
   animation-delay: 0.3s;
